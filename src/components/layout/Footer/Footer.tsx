@@ -1,4 +1,4 @@
-import Container from "../Container/Container";
+import Container from "../../ui/Container/Container";
 import styles from "./Footer.module.scss";
 
 function Footer() {
