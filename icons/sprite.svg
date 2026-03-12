@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="icon-menu" viewBox="0 0 24 24">
+  <path
+    d="M4 7H20M4 12H20M4 17H20"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+</symbol>
+
+  <symbol id="icon-close" viewBox="0 0 24 24">
+    <path
+      d="M6 6L18 18M18 6L6 18"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+  </symbol>
+
+  <symbol id="icon-logo-mark" viewBox="0 0 32 32">
+    <rect x="4" y="4" width="24" height="24" rx="8" fill="currentColor" />
+    <path
+      d="M11 21V11h2.5l4 5.5 4-5.5H24v10h-2.5v-6.2L18 19.5h-1l-3.5-4.7V21H11z"
+      fill="white"
+    />
+  </symbol>
+</svg>
