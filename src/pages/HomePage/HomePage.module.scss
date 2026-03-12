@@ -1,0 +1,68 @@
+.hero {
+  padding: 48px 0 56px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  max-width: 540px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.actionButton {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 72px 0 80px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .actionButton {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding: 96px 0 104px;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+}
