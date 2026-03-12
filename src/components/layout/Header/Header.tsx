@@ -1,34 +1,76 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import clsx from "clsx";
 import Container from "../../ui/Container/Container";
+import Button from "../../ui/Button/Button";
+import SVGIcon from "../../ui/SVGIcon/SVGIcon";
 import styles from "./Header.module.scss";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {setIsMenuOpen(prev => !prev)};
+
+const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header className={styles.header}>
       <Container>
-        <nav className={styles.nav}>
-          <Link className={styles.logo} to="/">
-            Maksym Sirenko
+        <div className={styles.inner}>
+          <Link className={styles.logo} to="/" onClick={closeMenu}>
+          <SVGIcon name="icon-logo-mark" className={styles.logoIcon} />
+            <span className={styles.logoText}>Maksym Sirenko</span>
           </Link>
 
-          <ul className={styles.navList}>
+          <button type="button"
+          className={styles.menuButton}
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}>
+            <SVGIcon name={isMenuOpen ? "icon-close" : "icon-menu"} />
+          </button>
+
+          <nav className={clsx(styles.nav, isMenuOpen && styles.navOpen)}>
+            <ul className={styles.navList}>
             <li>
-              <Link className={styles.link} to="/">
-                Home
-              </Link>
+               <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    clsx(styles.link, isActive && styles.activeLink)
+                  }
+                  onClick={closeMenu}
+                >
+                  Home
+                </NavLink>
             </li>
             <li>
-              <Link className={styles.link} to="/projects">
+              <NavLink
+                to="/projects"
+                className={({ isActive }) =>
+                  clsx(styles.link, isActive && styles.activeLink)
+                }
+                onClick={closeMenu}
+              >
                 Projects
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className={styles.link} to="/about">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  clsx(styles.link, isActive && styles.activeLink)
+                }
+                onClick={closeMenu}
+              >
                 About / Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
-        </nav>
+          <Button variant="secondary" className={styles.button}>
+            Contact Me
+          </Button>
+          </nav>
+        </div>
       </Container>
     </header>
   );
