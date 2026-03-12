@@ -1,14 +1,13 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 100;
   background-color: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #e5e7eb;
 }
 
 .inner {
-  position:relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,20 +18,26 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: inherit;
   text-decoration: none;
+  min-width: 0;
+  position: relative;
+  z-index: 140;
 }
 
 .logoIcon {
   width: 32px;
   height: 32px;
+  flex-shrink: 0;
 }
 
 .logoText {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 600;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .menuButton {
@@ -43,48 +48,74 @@
   height: 44px;
   border: 1px solid #d1d5db;
   border-radius: 12px;
-  background-color: transparent;
-  color: #111111;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111827;
   cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 140;
   transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    opacity 0.2s ease;
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .menuButton:hover {
   opacity: 0.9;
 }
 
+.menuButton:active {
+  transform: translateY(1px);
+}
+
 .nav {
-  position: absolute;
-  top: calc(100% + 1px);
-  left: 0;
-  width: 100%;
-  padding: 20px;
+  position: fixed;
+  top: 88px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-12px);
+  width: min(92vw, 420px);
+  padding: 24px 20px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
   background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  display: none;
+  box-shadow: 0 24px 60px rgba(17, 24, 39, 0.18);
+  display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    visibility 0.28s ease;
+  z-index: 130;
 }
 
 .navOpen {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 
 .navList {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .link {
+  display: inline-block;
   color: inherit;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
@@ -98,12 +129,42 @@
 
 .contactButton {
   width: 100%;
+  min-height: 48px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.28s ease,
+    background-color 0.28s ease,
+    visibility 0.28s ease;
+  z-index: 120;
+}
+
+.overlayVisible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  background-color: rgba(15, 23, 42, 0.42);
 }
 
 @media screen and (min-width: 768px) {
-
   .inner {
     min-height: 80px;
+  }
+
+  .logoIcon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logoText {
+    font-size: 20px;
   }
 
   .menuButton {
@@ -112,27 +173,39 @@
 
   .nav {
     position: static;
+    transform: none;
     width: auto;
     padding: 0;
-    border-bottom: none;
+    border: none;
+    border-radius: 0;
     background-color: transparent;
+    box-shadow: none;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 24px;
+    gap: 28px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .navList {
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
   }
 
   .link {
     font-size: 16px;
+    font-weight: 500;
   }
 
   .contactButton {
     width: auto;
+    min-height: auto;
+  }
+
+  .overlay {
+    display: none;
   }
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import clsx from "clsx";
 import Container from "../../ui/Container/Container";
@@ -9,11 +9,25 @@ import styles from "./Header.module.scss";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+
+    return () => {
+      document.body.classList.remove("menu-open");
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
+    setIsMenuOpen(prev => !prev);
   };
 
-  const closeMenu = () => setIsMenuOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     clsx(styles.link, isActive && styles.activeLink);
@@ -22,7 +36,7 @@ function Header() {
     <header className={styles.header}>
       <Container>
         <div className={styles.inner}>
-          <Link className={styles.logo} to="/" onClick={closeMenu}>
+          <Link to="/" className={styles.logo} onClick={closeMenu}>
             <SVGIcon name="icon-logo-mark" className={styles.logoIcon} />
             <span className={styles.logoText}>Maksym Sirenko</span>
           </Link>
@@ -31,26 +45,24 @@ function Header() {
             type="button"
             className={styles.menuButton}
             onClick={toggleMenu}
-            aria-label={
-              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
-            }
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isMenuOpen}
-            aria-controls="mobile-nav"
+            aria-controls="mobile-navigation"
           >
             <SVGIcon name={isMenuOpen ? "icon-close" : "icon-menu"} />
           </button>
 
-          <nav className={clsx(styles.nav, isMenuOpen && styles.navOpen)}>
+          <nav
+            id="mobile-navigation"
+            className={clsx(styles.nav, isMenuOpen && styles.navOpen)}
+          >
             <ul className={styles.navList}>
               <li>
-                <NavLink
-                  to="/"
-                  className={getLinkClass}
-                  onClick={closeMenu}
-                >
+                <NavLink to="/" className={getLinkClass} onClick={closeMenu}>
                   Home
                 </NavLink>
               </li>
+
               <li>
                 <NavLink
                   to="/projects"
@@ -60,6 +72,7 @@ function Header() {
                   Projects
                 </NavLink>
               </li>
+
               <li>
                 <NavLink
                   to="/about"
@@ -70,12 +83,23 @@ function Header() {
                 </NavLink>
               </li>
             </ul>
-            <Button variant="secondary" className={styles.button}>
+
+            <Button
+              variant="secondary"
+              className={styles.contactButton}
+              onClick={closeMenu}
+            >
               Contact Me
             </Button>
           </nav>
         </div>
       </Container>
+
+      <div
+        className={clsx(styles.overlay, isMenuOpen && styles.overlayVisible)}
+        onClick={closeMenu}
+        aria-hidden="true"
+      />
     </header>
   );
 }

@@ -1,0 +1,19 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.28s ease,
+    background-color 0.28s ease,
+    visibility 0.28s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  background-color: rgba(15, 23, 42, 0.42);
+}
