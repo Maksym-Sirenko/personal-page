@@ -7,26 +7,31 @@
     <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
   </symbol>
 
-  <symbol id="icon-logo-mark" viewBox="0 0 32 32">
-    <!-- background -->
-    <rect x="3" y="3" width="26" height="26" rx="8" fill="currentColor" />
+  <symbol id="icon-logo-mark" viewBox="0 0 220 220">
 
-    <!-- M -->
+    <rect x="20" y="20" width="180" height="180" rx="50" fill="#111111"/>
+
     <path
-      d="M10 23V9.5C10 9.1 10.3 8.8 10.7 8.8H12.2L16 14L19.8 8.8H21.3C21.7 8.8 22 9.1 22 9.5V23H20V14.8L17.6 18.2C17.4 18.5 17.1 18.7 16.7 18.7C16.3 18.7 16 18.5 15.8 18.2L13.4 14.8V23H10Z"
-      fill="#ffffff" />
+      d="M68 146V74C68 68.477 72.477 64 78 64H90L110 106L130 64H142C147.523 64 152 68.477 152 74V146H136V92L118 130C116.4 133.2 113.6 135 110 135C106.4 135 103.6 133.2 102 130L84 92V146H68Z"
+      fill="white"
+    />
 
-    <!-- subtle S -->
-    <path d="M22.5 13
-       C21.2 12.5 20 13 19.7 13.9
-       C19.4 14.8 20.1 15.5 21.2 15.9
-       C22.3 16.3 22.9 16.8 22.7 17.7
-       C22.5 18.7 21.5 19.2 20.5 18.9" stroke="#9CA3AF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-      fill="none" />
+    <path
+      d="M154 92
+         C145 90 139 94 139 100
+         C139 106 144 110 151 113
+         C158 116 161 120 160 126
+         C159 132 152 136 145 135"
+      stroke="#A8B1BD"
+      stroke-width="6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
 
-    <!-- stripes -->
-    <path d="M22 9L25.5 5.5" stroke="#7DD3FC" stroke-width="1.6" stroke-linecap="round" />
-    <path d="M23.5 11L26.5 8" stroke="#60A5FA" stroke-width="1.3" stroke-linecap="round" />
-    <path d="M24.7 13L27.2 10.5" stroke="#3B82F6" stroke-width="1" stroke-linecap="round" />
+    <path d="M153 67L179 41" stroke="#7DD3FC" stroke-width="10" stroke-linecap="round"/>
+    <path d="M164 82L186 60" stroke="#5FA8FF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M173 95L191 77" stroke="#3D7BE0" stroke-width="6" stroke-linecap="round"/>
+
   </symbol>
 </svg>
