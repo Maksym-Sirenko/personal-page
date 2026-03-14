@@ -7,7 +7,7 @@ export const projects: Project[] = [
     category: "Individual Project",
     description:
       "Camper rental catalog with filtering, API integration and dynamic routing.",
-    stack: ["React", "TypeScript", "REST API", "React Router", "SCSS"],
+    stack: ["React", "TypeScript", "REST API", "React Router", "CSS", "GitHub", "Figma"],
     responsibilities: [
       "Built camper rental catalog with filtering",
       "Integrated API data into the interface",
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     category: "Team Project",
     description:
       "Team website with pagination and performers cards section implementation.",
-    stack: ["HTML", "CSS", "JavaScript", "GitHub"],
+    stack: ["HTML", "CSS", "JavaScript", "GitHub", "Figma"],
     responsibilities: [
       "Implemented pagination",
       "Developed performers cards section",
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     category: "Individual Project",
     description:
       "Business landing page based on Figma design with responsive layout and semantic HTML.",
-    stack: ["HTML", "CSS", "Responsive Design", "Figma"],
+    stack: ["HTML", "CSS", "Responsive Design", "GitHub", "Figma"],
     responsibilities: [
       "Built responsive landing page from Figma",
       "Used semantic HTML structure",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     category: "Team Project",
     description:
       "Adaptive landing page with implemented Team and Gallery sections.",
-    stack: ["HTML", "CSS", "GitHub Flow"],
+    stack: ["HTML", "CSS", "GitHub", "Figma"],
     responsibilities: [
       "Implemented Team section",
       "Implemented Gallery section",

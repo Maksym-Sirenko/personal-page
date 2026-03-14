@@ -1,27 +1,36 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
-import styles from "./Button.module.scss";
+import { Link } from "react-router-dom";
 import clsx from "clsx";
+import styles from "./Button.module.scss";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
-
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: ButtonVariant;
-  children: ReactNode;
+type ButtonProps = {
+  children: React.ReactNode;
+  variant?: "primary" | "secondary";
+  to?: string;
+  href?: string;
+  onClick?: () => void;
 };
 
-function Button({
-  variant = "primary",
-  children,
-  className,
-  type = "button",
-  ...props
-}: ButtonProps) {
+function Button({ children, variant = "primary", to, href, onClick }: ButtonProps) {
+  const className = clsx(styles.button, styles[variant]);
+
+  if (to) {
+    return (
+      <Link to={to} className={className}>
+        {children}
+      </Link>
+    );
+  }
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button
-      type={type}
-      className={clsx(styles.button, styles[variant], className)}
-      {...props}
-    >
+    <button className={className} onClick={onClick}>
       {children}
     </button>
   );
