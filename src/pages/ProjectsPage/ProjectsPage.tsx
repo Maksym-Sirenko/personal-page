@@ -5,7 +5,7 @@ import { projects } from "../../data/projects";
 import type { Project } from "../../types/project";
 
 function ProjectsPage() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [, setSelectedProject] = useState<Project | null>(null);
 
   const handleOpenDetails = (project: Project) => {
     setSelectedProject(project);

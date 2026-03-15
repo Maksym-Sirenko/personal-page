@@ -1,5 +1,4 @@
 import type { Project } from "../../../types/project";
-import LinkButton from "../../ui/LinkButton/LinkButton";
 import Button from "../../ui/Button/Button";
 import styles from "./ProjectCard.module.scss";
 
@@ -19,7 +18,7 @@ function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
         <p className={styles.description}>{project.description}</p>
 
         <ul className={styles.stackList}>
-          {project.stack.map(tech => (
+          {project.stack.map((tech) => (
             <li key={tech} className={styles.stackItem}>
               {tech}
             </li>
@@ -28,9 +27,9 @@ function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
       </div>
 
       <div className={styles.actions}>
-        <LinkButton to={project.github} variant="secondary">
+        <Button href={project.github} variant="secondary">
           GitHub
-        </LinkButton>
+        </Button>
 
         <Button variant="primary" onClick={() => onOpenDetails(project)}>
           View Details
