@@ -1,14 +1,20 @@
 import { useState } from "react";
 import Container from "../../components/ui/Container/Container";
 import ProjectCard from "../../components/project/ProjectCard/ProjectCard";
+import ProjectModal from "../../components/project/ProjectModal/ProjectModal";
 import { projects } from "../../data/projects";
 import type { Project } from "../../types/project";
+import styles from "./ProjectsPage.module.scss";
 
 function ProjectsPage() {
-  const [, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const handleOpenDetails = (project: Project) => {
     setSelectedProject(project);
+  };
+
+  const handleCloseDetails = () => {
+    setSelectedProject(null);
   };
 
   return (
@@ -16,16 +22,13 @@ function ProjectsPage() {
       <Container>
         <section>
           <h1>Projects</h1>
-          <p>Selected projects that reflect my frontend and fullstack growth.</p>
+          <p>
+            Selected projects that reflect my frontend and fullstack growth.
+          </p>
 
-          <div
-            style={{
-              display: "grid",
-              gap: "20px",
-              marginTop: "24px",
-            }}
-          >
-            {projects.map(project => (
+          <div className={styles.grid}>
+          
+            {projects.map((project) => (
               <ProjectCard
                 key={project.id}
                 project={project}
@@ -35,6 +38,12 @@ function ProjectsPage() {
           </div>
         </section>
       </Container>
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={selectedProject !== null}
+        onClose={handleCloseDetails}
+      />
     </main>
   );
 }
