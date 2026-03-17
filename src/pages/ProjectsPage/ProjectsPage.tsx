@@ -5,9 +5,14 @@ import ProjectModal from "../../components/project/ProjectModal/ProjectModal";
 import { projects } from "../../data/projects";
 import type { Project } from "../../types/project";
 import styles from "./ProjectsPage.module.scss";
+import { translations, type Language } from "../../i18n/translations";
+import { useOutletContext } from "react-router-dom";
 
 function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const { language } = useOutletContext<{ language: Language }>();
+  const t = translations[language].projects;
 
   const handleOpenDetails = (project: Project) => {
     setSelectedProject(project);
@@ -21,10 +26,9 @@ function ProjectsPage() {
     <main>
       <Container>
         <section className={styles.section}>
-          <h1 className={styles.title}>Projects</h1>
-          <p className={styles.subtitle}>
-            Selected projects that reflect my frontend and fullstack growth.
-          </p>
+          <h1 className={styles.title}>{t.title}</h1>
+
+          <p className={styles.subtitle}>{t.subtitle}</p>
 
           <div className={styles.grid}>
             {projects.map((project) => (

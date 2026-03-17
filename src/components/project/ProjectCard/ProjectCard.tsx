@@ -1,6 +1,8 @@
 import type { Project } from "../../../types/project";
 import Button from "../../ui/Button/Button";
 import styles from "./ProjectCard.module.scss";
+import { useOutletContext } from "react-router-dom";
+import { translations, type Language } from "../../../i18n/translations";
 
 type ProjectCardProps = {
   project: Project;
@@ -9,6 +11,9 @@ type ProjectCardProps = {
 
 function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
   const previewStack = project.stack.slice(0, 5);
+
+  const { language } = useOutletContext<{ language: Language }>();
+  const t = translations[language].projects;
 
   return (
     <article className={styles.card}>
@@ -30,8 +35,8 @@ function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
 
       <div className={styles.actions}>
         <Button variant="primary" onClick={() => onOpenDetails(project)}>
-          View Details
-        </Button>
+  {t.viewDetails}
+</Button>
       </div>
     </article>
   );

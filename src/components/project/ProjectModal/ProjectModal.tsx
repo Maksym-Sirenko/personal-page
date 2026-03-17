@@ -2,6 +2,8 @@ import type { Project } from "../../../types/project";
 import Button from "../../ui/Button/Button";
 import Modal from "../../ui/Modal/Modal";
 import styles from "./ProjectModal.module.scss";
+import { useOutletContext } from "react-router-dom";
+import { translations, type Language } from "../../../i18n/translations";
 
 type ProjectModalProps = {
   project: Project | null;
@@ -10,6 +12,9 @@ type ProjectModalProps = {
 };
 
 function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+  const { language } = useOutletContext<{ language: Language }>();
+  const t = translations[language].projects;
+
   if (!project) return null;
 
   return (
@@ -20,7 +25,7 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         <p className={styles.description}>{project.description}</p>
 
         <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Tech stack</h3>
+          <h3 className={styles.blockTitle}>{t.techStack}</h3>
           <ul className={styles.stackList}>
             {project.stack.map((item) => (
               <li key={item} className={styles.stackItem}>
@@ -31,7 +36,7 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         </div>
 
         <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Responsibilities</h3>
+          <h3 className={styles.blockTitle}>{t.responsibilities}</h3>
           <ul className={styles.responsibilitiesList}>
             {project.responsibilities.map((item) => (
               <li key={item}>{item}</li>
@@ -41,11 +46,11 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
         <div className={styles.actions}>
           <Button href={project.liveDemo} variant="primary">
-            Live Demo
+            {t.liveDemo}
           </Button>
 
           <Button href={project.github} variant="secondary">
-            GitHub
+            {t.github}
           </Button>
         </div>
       </div>
