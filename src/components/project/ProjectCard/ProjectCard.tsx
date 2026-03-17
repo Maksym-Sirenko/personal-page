@@ -8,6 +8,8 @@ type ProjectCardProps = {
 };
 
 function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
+  const previewStack = project.stack.slice(0, 5);
+
   return (
     <article className={styles.card}>
       <div className={styles.content}>
@@ -18,7 +20,7 @@ function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
         <p className={styles.description}>{project.description}</p>
 
         <ul className={styles.stackList}>
-          {project.stack.map((tech) => (
+          {previewStack.map((tech) => (
             <li key={tech} className={styles.stackItem}>
               {tech}
             </li>
@@ -27,10 +29,6 @@ function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
       </div>
 
       <div className={styles.actions}>
-        <Button href={project.github} variant="secondary">
-          GitHub
-        </Button>
-
         <Button variant="primary" onClick={() => onOpenDetails(project)}>
           View Details
         </Button>

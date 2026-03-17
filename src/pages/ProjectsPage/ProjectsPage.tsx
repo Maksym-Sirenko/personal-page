@@ -20,14 +20,13 @@ function ProjectsPage() {
   return (
     <main>
       <Container>
-        <section>
-          <h1>Projects</h1>
-          <p>
+        <section className={styles.section}>
+          <h1 className={styles.title}>Projects</h1>
+          <p className={styles.subtitle}>
             Selected projects that reflect my frontend and fullstack growth.
           </p>
 
           <div className={styles.grid}>
-          
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}

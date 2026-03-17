@@ -22,7 +22,7 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         <div className={styles.block}>
           <h3 className={styles.blockTitle}>Tech stack</h3>
           <ul className={styles.stackList}>
-            {project.stack.map(item => (
+            {project.stack.map((item) => (
               <li key={item} className={styles.stackItem}>
                 {item}
               </li>
@@ -33,7 +33,7 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         <div className={styles.block}>
           <h3 className={styles.blockTitle}>Responsibilities</h3>
           <ul className={styles.responsibilitiesList}>
-            {project.responsibilities.map(item => (
+            {project.responsibilities.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>

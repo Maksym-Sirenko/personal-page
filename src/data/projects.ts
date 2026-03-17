@@ -3,41 +3,73 @@ import type { Project } from "../types/project";
 export const projects: Project[] = [
   {
     id: "travel-trucks",
-    title: "Travel Trucks",
+    title: "TravelTrucks",
     category: "Individual Project",
     description:
-      "Camper rental catalog with filtering, API integration and dynamic routing.",
-    stack: ["React", "TypeScript", "REST API", "React Router", "CSS", "GitHub", "Figma"],
+      "Camper rental platform with filtering, API integration, dynamic routing, and booking flow.",
+    stack: ["Next.js", "React", "TypeScript", "Zustand", "Axios", "CSS", "Figma"],
     responsibilities: [
-      "Built camper rental catalog with filtering",
+      "Built camper catalog with filtering and detailed pages",
       "Integrated API data into the interface",
-      "Implemented dynamic routing for project pages",
-      "Created responsive UI components",
+      "Implemented routing and project page structure",
+      "Created responsive UI components based on Figma",
     ],
     liveDemo: "https://travel-trucks-mu-lovat.vercel.app/",
     github: "https://github.com/Maksym-Sirenko/travel-trucks",
+  },
+  {
+    id: "auth-app",
+    title: "Auth App",
+    category: "Individual Project",
+    description:
+      "Authentication app with registration, login, protected routes, and backend integration.",
+    stack: ["Node.js", "Express", "MongoDB", "JWT", "REST API", "Render", "Vercel"],
+    responsibilities: [
+      "Implemented user registration and login flow",
+      "Worked with authentication and protected routes",
+      "Connected frontend and backend logic",
+      "Handled API requests and validation",
+    ],
+    liveDemo: "https://09-auth-mu-ashen.vercel.app/",
+    github: "https://github.com/Maksym-Sirenko/09-auth",
   },
   {
     id: "artistshub",
     title: "ArtistsHub",
     category: "Team Project",
     description:
-      "Team website with pagination and performers cards section implementation.",
+      "Team website with responsive layout, pagination, and performers cards section.",
     stack: ["HTML", "CSS", "JavaScript", "GitHub", "Figma"],
     responsibilities: [
-      "Implemented pagination",
+      "Implemented pagination logic",
       "Developed performers cards section",
-      "Worked in team collaboration flow",
+      "Collaborated in a team using GitHub flow",
     ],
     liveDemo: "https://zviacheslavv.github.io/developers-orchestra-project/",
     github: "https://github.com/ZviacheslavV/developers-orchestra-project",
   },
   {
-    id: "webstudio",
+    id: "gallery-lightbox",
+    title: "Gallery with Lightbox",
+    category: "Individual Project",
+    description:
+      "Interactive image gallery with modal preview and external library integration.",
+    stack: ["JavaScript", "SimpleLightbox", "HTML", "CSS", "GitHub"],
+    responsibilities: [
+      "Created dynamic gallery markup",
+      "Integrated SimpleLightbox library",
+      "Implemented image preview interaction",
+      "Structured clean DOM-based logic",
+    ],
+    liveDemo: "https://maksym-sirenko.github.io/goit-js-hw-12/",
+    github: "https://github.com/Maksym-Sirenko/goit-js-hw-12",
+  },
+  {
+    id: "WebStudio",
     title: "WebStudio",
     category: "Individual Project",
     description:
-      "Business landing page based on Figma design with responsive layout and semantic HTML.",
+      "Responsive business landing page based on Figma design with semantic HTML structure.",
     stack: ["HTML", "CSS", "Responsive Design", "GitHub", "Figma"],
     responsibilities: [
       "Built responsive landing page from Figma",
@@ -59,7 +91,7 @@ export const projects: Project[] = [
       "Implemented Gallery section",
       "Worked with collaborative GitHub Flow",
     ],
-    liveDemo: "https://goit-team-projects.github.io/goit-markup-team-project/",
-    github: "https://github.com/goit-team-projects/goit-markup-team-project",
+    liveDemo: "https://zviacheslavv.github.io/yoga-grp-project-alpha25-refined/",
+    github: "https://github.com/ZViacheslavV/yoga-grp-project-alpha25-refined",
   },
 ];
