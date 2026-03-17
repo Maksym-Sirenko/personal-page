@@ -5,17 +5,29 @@ import Container from "../../ui/Container/Container";
 import Button from "../../ui/Button/Button";
 import SVGIcon from "../../ui/SVGIcon/SVGIcon";
 import Drawer from "../../ui/Drawer/Drawer";
+import { translations, type Language } from "../../../i18n/translations";
 import styles from "./Header.module.scss";
 
-function Header() {
+type HeaderProps = {
+  language: Language;
+  setLanguage: React.Dispatch<React.SetStateAction<Language>>;
+};
+
+function Header({ language, setLanguage }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const t = translations[language];
+
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
+    setIsMenuOpen(prev => !prev);
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(prev => (prev === "en" ? "ua" : "en"));
   };
 
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -34,33 +46,39 @@ function Header() {
             <ul className={styles.desktopNavList}>
               <li>
                 <NavLink to="/" className={getLinkClass}>
-                  Home
+                  {t.nav.home}
                 </NavLink>
               </li>
 
               <li>
                 <NavLink to="/projects" className={getLinkClass}>
-                  Projects
+                  {t.nav.projects}
                 </NavLink>
               </li>
 
               <li>
                 <NavLink to="/about" className={getLinkClass}>
-                  About / Contact
+                  {t.nav.about}
                 </NavLink>
               </li>
             </ul>
 
-            <Button variant="secondary">Contact Me</Button>
+            <Button variant="secondary">{t.nav.contact}</Button>
+
+            <button
+              type="button"
+              className={styles.languageButton}
+              onClick={toggleLanguage}
+            >
+              {language === "en" ? "UA" : "EN"}
+            </button>
           </nav>
 
           <button
             type="button"
             className={styles.menuButton}
             onClick={toggleMenu}
-            aria-label={
-              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
-            }
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
           >
@@ -74,23 +92,19 @@ function Header() {
           <ul className={styles.mobileNavList}>
             <li>
               <NavLink to="/" className={getLinkClass} onClick={closeMenu}>
-                Home
+                {t.nav.home}
               </NavLink>
             </li>
 
             <li>
-              <NavLink
-                to="/projects"
-                className={getLinkClass}
-                onClick={closeMenu}
-              >
-                Projects
+              <NavLink to="/projects" className={getLinkClass} onClick={closeMenu}>
+                {t.nav.projects}
               </NavLink>
             </li>
 
             <li>
               <NavLink to="/about" className={getLinkClass} onClick={closeMenu}>
-                About / Contact
+                {t.nav.about}
               </NavLink>
             </li>
           </ul>
@@ -100,8 +114,16 @@ function Header() {
             className={styles.mobileContactButton}
             onClick={closeMenu}
           >
-            Contact Me
+            {t.nav.contact}
           </Button>
+
+          <button
+            type="button"
+            className={styles.languageButton}
+            onClick={toggleLanguage}
+          >
+            {language === "en" ? "UA" : "EN"}
+          </button>
         </nav>
       </Drawer>
     </header>
