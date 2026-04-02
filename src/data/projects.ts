@@ -18,6 +18,22 @@ export const projects: Project[] = [
     github: "https://github.com/Maksym-Sirenko/travel-trucks",
   },
   {
+    id: "leleka-app",
+    title: "Leleka App",
+    category: "Team Project",
+    description:
+      "",
+    stack: ["Next.js", "React", "TypeScript", "Zustand", "Axios", "CSS", "Figma"],
+    responsibilities: [
+      "Built camper catalog with filtering and detailed pages",
+      "Integrated API data into the interface",
+      "Implemented routing and project page structure",
+      "Created responsive UI components based on Figma",
+    ],
+    liveDemo: "https://travel-trucks-mu-lovat.vercel.app/",
+    github: "https://github.com/Maksym-Sirenko/travel-trucks",
+  },
+  {
     id: "auth-app",
     title: "Auth App",
     category: "Individual Project",
