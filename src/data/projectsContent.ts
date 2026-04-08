@@ -1,21 +1,22 @@
-import type { Project } from "../types/project";
+﻿import type { Project } from "../types/project";
 
 export const projectsContent: Project[] = [
   {
     id: "travel-trucks",
     title: { ua: "TravelTrucks", en: "TravelTrucks" },
-    category: { ua: "Індивідуальний проєкт", en: "Individual Project" },
+    category: { ua: "Р†РЅРґРёРІС–РґСѓР°Р»СЊРЅРёР№ РїСЂРѕС”РєС‚", en: "Individual Project" },
     description: {
-      ua: "Платформа оренди кемперів із фільтрацією, інтеграцією API, динамічною маршрутизацією та логікою бронювання.",
+      ua: "РџР»Р°С‚С„РѕСЂРјР° РѕСЂРµРЅРґРё РєРµРјРїРµСЂС–РІ С–Р· С„С–Р»СЊС‚СЂР°С†С–С”СЋ, С–РЅС‚РµРіСЂР°С†С–С”СЋ API, РґРёРЅР°РјС–С‡РЅРѕСЋ РјР°СЂС€СЂСѓС‚РёР·Р°С†С–С”СЋ С‚Р° Р»РѕРіС–РєРѕСЋ Р±СЂРѕРЅСЋРІР°РЅРЅСЏ.",
       en: "Camper rental platform with filtering, API integration, dynamic routing, and booking flow.",
     },
+    coverImage: "/projects/travel-trucks/travel-trucks-cover.jpg",
     stack: ["Next.js", "React", "TypeScript", "Zustand", "Axios", "CSS", "Figma"],
     responsibilities: {
       ua: [
-        "Реалізував каталог кемперів із фільтрацією та детальними сторінками",
-        "Інтегрував API-дані в інтерфейс",
-        "Реалізував маршрутизацію та структуру сторінок проєкту",
-        "Створив адаптивні UI-компоненти на основі Figma",
+        "Р РµР°Р»С–Р·СѓРІР°РІ РєР°С‚Р°Р»РѕРі РєРµРјРїРµСЂС–РІ С–Р· С„С–Р»СЊС‚СЂР°С†С–С”СЋ С‚Р° РґРµС‚Р°Р»СЊРЅРёРјРё СЃС‚РѕСЂС–РЅРєР°РјРё",
+        "Р†РЅС‚РµРіСЂСѓРІР°РІ API-РґР°РЅС– РІ С–РЅС‚РµСЂС„РµР№СЃ",
+        "Р РµР°Р»С–Р·СѓРІР°РІ РјР°СЂС€СЂСѓС‚РёР·Р°С†С–СЋ С‚Р° СЃС‚СЂСѓРєС‚СѓСЂСѓ СЃС‚РѕСЂС–РЅРѕРє РїСЂРѕС”РєС‚Сѓ",
+        "РЎС‚РІРѕСЂРёРІ Р°РґР°РїС‚РёРІРЅС– UI-РєРѕРјРїРѕРЅРµРЅС‚Рё РЅР° РѕСЃРЅРѕРІС– Figma",
       ],
       en: [
         "Built camper catalog with filtering and detailed pages",
@@ -30,18 +31,19 @@ export const projectsContent: Project[] = [
   {
     id: "leleka-app",
     title: { ua: "Leleka App", en: "Leleka App" },
-    category: { ua: "Командний проєкт", en: "Team Project" },
+    category: { ua: "РљРѕРјР°РЅРґРЅРёР№ РїСЂРѕС”РєС‚", en: "Team Project" },
     description: {
-      ua: "Повнофункціональний командний проєкт із повторно використовуваними UI-компонентами, модальною системою та адаптивним інтерфейсом, створеним на основі Figma.",
+      ua: "РџРѕРІРЅРѕС„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅРёР№ РєРѕРјР°РЅРґРЅРёР№ РїСЂРѕС”РєС‚ С–Р· РїРѕРІС‚РѕСЂРЅРѕ РІРёРєРѕСЂРёСЃС‚РѕРІСѓРІР°РЅРёРјРё UI-РєРѕРјРїРѕРЅРµРЅС‚Р°РјРё, РјРѕРґР°Р»СЊРЅРѕСЋ СЃРёСЃС‚РµРјРѕСЋ С‚Р° Р°РґР°РїС‚РёРІРЅРёРј С–РЅС‚РµСЂС„РµР№СЃРѕРј, СЃС‚РІРѕСЂРµРЅРёРј РЅР° РѕСЃРЅРѕРІС– Figma.",
       en: "Fullstack team project with reusable UI components, modal system, and responsive interface built from Figma.",
     },
+    coverImage: "/projects/leleka-app/leleka-app-cover.jpg",
     stack: ["Next.js", "React", "TypeScript", "Axios", "CSS", "Figma"],
     responsibilities: {
       ua: [
-        "Розробив повторно використовувані UI-компоненти для всього застосунку",
-        "Реалізував модальну систему для взаємодії з користувачем",
-        "Працював над частиною розмітки сторінки та структурою UI",
-        "Співпрацював із командою через GitHub workflow",
+        "Р РѕР·СЂРѕР±РёРІ РїРѕРІС‚РѕСЂРЅРѕ РІРёРєРѕСЂРёСЃС‚РѕРІСѓРІР°РЅС– UI-РєРѕРјРїРѕРЅРµРЅС‚Рё РґР»СЏ РІСЃСЊРѕРіРѕ Р·Р°СЃС‚РѕСЃСѓРЅРєСѓ",
+        "Р РµР°Р»С–Р·СѓРІР°РІ РјРѕРґР°Р»СЊРЅСѓ СЃРёСЃС‚РµРјСѓ РґР»СЏ РІР·Р°С”РјРѕРґС–С— Р· РєРѕСЂРёСЃС‚СѓРІР°С‡РµРј",
+        "РџСЂР°С†СЋРІР°РІ РЅР°Рґ С‡Р°СЃС‚РёРЅРѕСЋ СЂРѕР·РјС–С‚РєРё СЃС‚РѕСЂС–РЅРєРё С‚Р° СЃС‚СЂСѓРєС‚СѓСЂРѕСЋ UI",
+        "РЎРїС–РІРїСЂР°С†СЋРІР°РІ С–Р· РєРѕРјР°РЅРґРѕСЋ С‡РµСЂРµР· GitHub workflow",
       ],
       en: [
         "Developed reusable UI components used across the application",
@@ -54,26 +56,27 @@ export const projectsContent: Project[] = [
     github: "https://github.com/ZViacheslavV/fullstack-genesis-project-fs",
   },
   {
-    id: "auth-app",
-    title: { ua: "Auth App", en: "Auth App" },
+    id: "notehub",
+    title: { ua: "NoteHub", en: "NoteHub" },
     category: { ua: "Індивідуальний проєкт", en: "Individual Project" },
     description: {
-      ua: "Додаток для автентифікації з реєстрацією, входом, захищеними маршрутами та інтеграцією з бекендом.",
-      en: "Authentication app with registration, login, protected routes, and backend integration.",
+      ua: "Застосунок для нотаток з реєстрацією, входом, фільтрацією, пагінацією та інтеграцією з бекендом.",
+      en: "Notes app with registration, login, filtering, pagination, and backend integration.",
     },
+    coverImage: "/projects/notehub/notehub-cover.jpg",
     stack: ["Node.js", "Express", "MongoDB", "JWT", "REST API", "Render", "Vercel"],
     responsibilities: {
       ua: [
         "Реалізував реєстрацію та вхід користувача",
-        "Працював з автентифікацією та захищеними маршрутами",
-        "Інтегрував frontend і backend логіку",
-        "Обробляв API-запити та валідацію",
+        "Створив інтерфейс для списку нотаток із пошуком і фільтрацією",
+        "Додав пагінацію та захищені маршрути",
+        "Інтегрував frontend і backend логіку через REST API",
       ],
       en: [
         "Implemented user registration and login flow",
-        "Worked with authentication and protected routes",
-        "Connected frontend and backend logic",
-        "Handled API requests and validation",
+        "Built notes list interface with search and filtering",
+        "Added pagination and protected routes",
+        "Integrated frontend and backend logic through REST API",
       ],
     },
     liveDemo: "https://09-auth-mu-ashen.vercel.app/",
@@ -82,17 +85,18 @@ export const projectsContent: Project[] = [
   {
     id: "artistshub",
     title: { ua: "ArtistsHub", en: "ArtistsHub" },
-    category: { ua: "Командний проєкт", en: "Team Project" },
+    category: { ua: "РљРѕРјР°РЅРґРЅРёР№ РїСЂРѕС”РєС‚", en: "Team Project" },
     description: {
-      ua: "Командний вебсайт з адаптивним макетом, пагінацією та розділом карток виконавців.",
+      ua: "РљРѕРјР°РЅРґРЅРёР№ РІРµР±СЃР°Р№С‚ Р· Р°РґР°РїС‚РёРІРЅРёРј РјР°РєРµС‚РѕРј, РїР°РіС–РЅР°С†С–С”СЋ С‚Р° СЂРѕР·РґС–Р»РѕРј РєР°СЂС‚РѕРє РІРёРєРѕРЅР°РІС†С–РІ.",
       en: "Team website with responsive layout, pagination, and performers cards section.",
     },
+    coverImage: "/projects/artistshub/artistshub-cover.jpg",
     stack: ["HTML", "CSS", "JavaScript", "GitHub", "Figma"],
     responsibilities: {
       ua: [
-        "Реалізував логіку пагінації",
-        "Розробив розділ карток виконавців",
-        "Співпрацював у команді з використанням GitHub flow",
+        "Р РµР°Р»С–Р·СѓРІР°РІ Р»РѕРіС–РєСѓ РїР°РіС–РЅР°С†С–С—",
+        "Р РѕР·СЂРѕР±РёРІ СЂРѕР·РґС–Р» РєР°СЂС‚РѕРє РІРёРєРѕРЅР°РІС†С–РІ",
+        "РЎРїС–РІРїСЂР°С†СЋРІР°РІ Сѓ РєРѕРјР°РЅРґС– Р· РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏРј GitHub flow",
       ],
       en: [
         "Implemented pagination logic",
@@ -105,19 +109,20 @@ export const projectsContent: Project[] = [
   },
   {
     id: "gallery-lightbox",
-    title: { ua: "Галерея з Lightbox", en: "Gallery with Lightbox" },
-    category: { ua: "Індивідуальний проєкт", en: "Individual Project" },
+    title: { ua: "Р“Р°Р»РµСЂРµСЏ Р· Lightbox", en: "Gallery with Lightbox" },
+    category: { ua: "Р†РЅРґРёРІС–РґСѓР°Р»СЊРЅРёР№ РїСЂРѕС”РєС‚", en: "Individual Project" },
     description: {
-      ua: "Інтерактивна галерея з модальним переглядом та інтеграцією зовнішньої бібліотеки.",
+      ua: "Р†РЅС‚РµСЂР°РєС‚РёРІРЅР° РіР°Р»РµСЂРµСЏ Р· РјРѕРґР°Р»СЊРЅРёРј РїРµСЂРµРіР»СЏРґРѕРј С‚Р° С–РЅС‚РµРіСЂР°С†С–С”СЋ Р·РѕРІРЅС–С€РЅСЊРѕС— Р±С–Р±Р»С–РѕС‚РµРєРё.",
       en: "Interactive image gallery with modal preview and external library integration.",
     },
+    coverImage: "/projects/gallery-lightbox/gallery-lightbox-cover.jpg",
     stack: ["JavaScript", "SimpleLightbox", "HTML", "CSS", "GitHub"],
     responsibilities: {
       ua: [
-        "Створив динамічну розмітку галереї",
-        "Інтегрував бібліотеку SimpleLightbox",
-        "Реалізував взаємодію з попереднім переглядом зображень",
-        "Структурував чисту DOM-орієнтовану логіку",
+        "РЎС‚РІРѕСЂРёРІ РґРёРЅР°РјС–С‡РЅСѓ СЂРѕР·РјС–С‚РєСѓ РіР°Р»РµСЂРµС—",
+        "Р†РЅС‚РµРіСЂСѓРІР°РІ Р±С–Р±Р»С–РѕС‚РµРєСѓ SimpleLightbox",
+        "Р РµР°Р»С–Р·СѓРІР°РІ РІР·Р°С”РјРѕРґС–СЋ Р· РїРѕРїРµСЂРµРґРЅС–Рј РїРµСЂРµРіР»СЏРґРѕРј Р·РѕР±СЂР°Р¶РµРЅСЊ",
+        "РЎС‚СЂСѓРєС‚СѓСЂСѓРІР°РІ С‡РёСЃС‚Сѓ DOM-РѕСЂС–С”РЅС‚РѕРІР°РЅСѓ Р»РѕРіС–РєСѓ",
       ],
       en: [
         "Created dynamic gallery markup",
@@ -132,17 +137,18 @@ export const projectsContent: Project[] = [
   {
     id: "webstudio",
     title: { ua: "WebStudio", en: "WebStudio" },
-    category: { ua: "Індивідуальний проєкт", en: "Individual Project" },
+    category: { ua: "Р†РЅРґРёРІС–РґСѓР°Р»СЊРЅРёР№ РїСЂРѕС”РєС‚", en: "Individual Project" },
     description: {
-      ua: "Адаптивна бізнес-сторінка на основі Figma з семантичною HTML-структурою.",
+      ua: "РђРґР°РїС‚РёРІРЅР° Р±С–Р·РЅРµСЃ-СЃС‚РѕСЂС–РЅРєР° РЅР° РѕСЃРЅРѕРІС– Figma Р· СЃРµРјР°РЅС‚РёС‡РЅРѕСЋ HTML-СЃС‚СЂСѓРєС‚СѓСЂРѕСЋ.",
       en: "Responsive business landing page based on Figma design with semantic HTML structure.",
     },
+    coverImage: "/projects/webstudio/webstudio-cover.jpg",
     stack: ["HTML", "CSS", "Responsive Design", "GitHub", "Figma"],
     responsibilities: {
       ua: [
-        "Створив адаптивний лендинг на основі Figma",
-        "Використав семантичну HTML-структуру",
-        "Реалізував адаптивну верстку для різних розмірів екрана",
+        "РЎС‚РІРѕСЂРёРІ Р°РґР°РїС‚РёРІРЅРёР№ Р»РµРЅРґРёРЅРі РЅР° РѕСЃРЅРѕРІС– Figma",
+        "Р’РёРєРѕСЂРёСЃС‚Р°РІ СЃРµРјР°РЅС‚РёС‡РЅСѓ HTML-СЃС‚СЂСѓРєС‚СѓСЂСѓ",
+        "Р РµР°Р»С–Р·СѓРІР°РІ Р°РґР°РїС‚РёРІРЅСѓ РІРµСЂСЃС‚РєСѓ РґР»СЏ СЂС–Р·РЅРёС… СЂРѕР·РјС–СЂС–РІ РµРєСЂР°РЅР°",
       ],
       en: [
         "Built responsive landing page from Figma",
@@ -156,17 +162,18 @@ export const projectsContent: Project[] = [
   {
     id: "yoga-studio",
     title: { ua: "Yoga Studio", en: "Yoga Studio" },
-    category: { ua: "Командний проєкт", en: "Team Project" },
+    category: { ua: "РљРѕРјР°РЅРґРЅРёР№ РїСЂРѕС”РєС‚", en: "Team Project" },
     description: {
-      ua: "Адаптивний лендинг із реалізованими секціями Team та Gallery.",
+      ua: "РђРґР°РїС‚РёРІРЅРёР№ Р»РµРЅРґРёРЅРі С–Р· СЂРµР°Р»С–Р·РѕРІР°РЅРёРјРё СЃРµРєС†С–СЏРјРё Team С‚Р° Gallery.",
       en: "Adaptive landing page with implemented Team and Gallery sections.",
     },
+    coverImage: "/projects/yoga-studio/yoga-studio-cover.jpg",
     stack: ["HTML", "CSS", "GitHub", "Figma"],
     responsibilities: {
       ua: [
-        "Реалізував секцію Team",
-        "Реалізував секцію Gallery",
-        "Працював у команді з використанням GitHub Flow",
+        "Р РµР°Р»С–Р·СѓРІР°РІ СЃРµРєС†С–СЋ Team",
+        "Р РµР°Р»С–Р·СѓРІР°РІ СЃРµРєС†С–СЋ Gallery",
+        "РџСЂР°С†СЋРІР°РІ Сѓ РєРѕРјР°РЅРґС– Р· РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏРј GitHub Flow",
       ],
       en: [
         "Implemented Team section",

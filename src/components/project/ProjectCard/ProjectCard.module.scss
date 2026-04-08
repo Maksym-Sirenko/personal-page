@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 320px;
+  min-height: 420px;
   gap: 20px;
   padding: 24px;
   border: 1px solid #e5e7eb;
@@ -19,6 +19,92 @@
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(17, 24, 39, 0.1);
   border-color: #d1d5db;
+}
+
+.media {
+  overflow: hidden;
+  border: 1px solid #dbe2ea;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(59, 130, 246, 0.02)),
+    #f8fafc;
+}
+
+.coverImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.browserBar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.browserDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #cbd5e1;
+}
+
+.browserDot:first-child {
+  background-color: #f87171;
+}
+
+.browserDot:nth-child(2) {
+  background-color: #fbbf24;
+}
+
+.browserDot:nth-child(3) {
+  background-color: #34d399;
+}
+
+.previewPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 170px;
+  gap: 14px;
+  padding: 18px;
+}
+
+.previewCategory {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1d4ed8;
+  text-transform: uppercase;
+}
+
+.previewTitle {
+  margin: 0;
+  max-width: 240px;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #0f172a;
+}
+
+.previewHighlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.previewBadge {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 13px;
+  line-height: 1.2;
+  color: #334155;
 }
 
 .content {
@@ -76,10 +162,19 @@
 
 @media screen and (min-width: 768px) {
   .card {
-    min-height: 340px;
+    min-height: 460px;
   }
 
   .title {
+    font-size: 28px;
+  }
+
+  .previewPanel {
+    min-height: 190px;
+    padding: 20px;
+  }
+
+  .previewTitle {
     font-size: 28px;
   }
 }

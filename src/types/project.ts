@@ -15,6 +15,7 @@ export type Project = {
   title: LocalizedText;
   category: LocalizedText;
   description: LocalizedText;
+  coverImage?: string;
   stack: string[];
   responsibilities: LocalizedList;
   liveDemo: string;

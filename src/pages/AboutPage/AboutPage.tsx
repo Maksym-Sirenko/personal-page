@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+﻿import { useOutletContext } from "react-router-dom";
 import Container from "../../components/ui/Container/Container";
 import Button from "../../components/ui/Button/Button";
 import { siteContent, type Language } from "../../i18n/siteContent";
@@ -7,6 +7,8 @@ import styles from "./AboutPage.module.scss";
 type OutletContextType = {
   language: Language;
 };
+
+const resumeHref = "/documents/maksym-sirenko-resume.pdf";
 
 function AboutPage() {
   const { language } = useOutletContext<OutletContextType>();
@@ -19,7 +21,8 @@ function AboutPage() {
           <div className={styles.hero}>
             <div className={styles.copy}>
               <h1 className={styles.title}>{t.title}</h1>
-              <p className={styles.intro}>{t.intro}</p>
+              <p className={styles.introLead}>{t.introLead}</p>
+              <p className={styles.introBody}>{t.introBody}</p>
             </div>
 
             <div className={styles.card}>
@@ -31,6 +34,29 @@ function AboutPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>{t.goalsTitle}</h2>
+              <ul className={styles.list}>
+                {t.goalsItems.map((item) => (
+                  <li key={item} className={styles.listItem}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>{t.resumeTitle}</h2>
+              <p className={styles.cardText}>{t.resumeText}</p>
+              <div className={styles.singleAction}>
+                <Button href={resumeHref} target="_self" download variant="primary">
+                  {t.downloadResume}
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -56,7 +82,7 @@ function AboutPage() {
               <Button href="https://t.me/Yambren" variant="secondary">
                 {t.telegram}
               </Button>
-              <Button to="/projects" variant="ghost">
+              <Button to="/projects" variant="secondary">
                 {t.projectsLink}
               </Button>
             </div>

@@ -1,4 +1,8 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import styles from "./Button.module.scss";
@@ -23,11 +27,11 @@ type RouterLinkProps = BaseProps & {
   onClick?: () => void;
 };
 
-type AnchorProps = BaseProps & {
-  href: string;
-  to?: never;
-  onClick?: () => void;
-};
+type AnchorProps = BaseProps &
+  AnchorHTMLAttributes<HTMLAnchorElement> & {
+    href: string;
+    to?: never;
+  };
 
 type ButtonProps = NativeButtonProps | RouterLinkProps | AnchorProps;
 
@@ -53,13 +57,16 @@ function Button(props: ButtonProps) {
   }
 
   if (isAnchorProps(props)) {
+    const { href, onClick, target, rel, download } = props;
+
     return (
       <a
-        href={props.href}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={href}
+        target={target ?? "_blank"}
+        rel={rel ?? (target === "_self" || download ? undefined : "noopener noreferrer")}
         className={buttonClassName}
-        onClick={props.onClick}
+        onClick={onClick}
+        download={download}
       >
         {children}
       </a>

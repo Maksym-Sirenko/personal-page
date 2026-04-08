@@ -11,10 +11,35 @@
     },
     home: {
       title: "Maksym Sirenko",
+      role: "Junior Frontend Developer | React • TypeScript • REST API",
       subtitle:
-        "Junior Frontend Developer focused on React, TypeScript, and practical web interfaces.",
+        "I build responsive interfaces with React and TypeScript, and I enjoy turning clean layouts into practical user flows.",
       viewProjects: "View Projects",
       contact: "Contact Me",
+      downloadResume: "Download Resume",
+      featuredTitle: "Featured Projects",
+      featuredSubtitle:
+        "A few projects that show how I work with interfaces, APIs, and product-focused frontend tasks.",
+      stackTitle: "Core Stack",
+      stackText:
+        "I work with modern frontend tools, reusable components, and clean integration with backend services.",
+      stackItems: [
+        "React and TypeScript",
+        "REST API integration",
+        "Responsive layout",
+        "Reusable UI components",
+        "GitHub collaboration",
+        "Figma-based implementation",
+      ],
+      highlights: [
+        { value: "7+", label: "portfolio projects" },
+        { value: "React", label: "main frontend focus" },
+        { value: "REST API", label: "practical integration" },
+      ],
+      aboutTitle: "How I work",
+      aboutText:
+        "I like interfaces that feel clear, useful, and well structured. I care about responsive behavior, maintainable code, and steady progress inside a team workflow.",
+      aboutAction: "More About Me",
     },
     projects: {
       title: "Projects",
@@ -28,14 +53,26 @@
     },
     about: {
       title: "About Me",
-      intro:
-        "I build responsive interfaces with React and TypeScript, and I enjoy turning clean layouts into clear, practical user flows.",
+      introLead:
+        "I am a junior frontend developer focused on React, TypeScript, and practical interfaces that solve real tasks.",
+      introBody:
+        "I enjoy building responsive pages, working with API data, and turning clean layouts into understandable user experiences. I feel most useful when I can combine clear structure, visual attention to detail, and steady implementation work.",
       summaryTitle: "What I focus on",
       summaryItems: [
         "Responsive frontend with attention to detail",
         "Reusable components and maintainable structure",
         "Practical experience with REST API integration and authentication",
       ],
+      goalsTitle: "What I am looking for",
+      goalsItems: [
+        "Junior frontend opportunities",
+        "Internship or trainee roles",
+        "Freelance tasks where clear UI matters",
+      ],
+      resumeTitle: "Resume",
+      resumeText:
+        "A short version of my experience, skills, and project work in one place.",
+      downloadResume: "Download Resume",
       contactTitle: "Contact",
       contactText:
         "If you have an internship, junior role, or freelance task in mind, I am open to a conversation.",
@@ -66,10 +103,35 @@
     },
     home: {
       title: "Максим Сіренко",
+      role: "Junior Frontend Developer | React • TypeScript • REST API",
       subtitle:
-        "Junior Frontend Developer, зосереджений на React, TypeScript та практичних вебінтерфейсах.",
+        "Я створюю адаптивні інтерфейси на React і TypeScript та люблю перетворювати охайні макети на практичні й зрозумілі сценарії для користувача.",
       viewProjects: "Переглянути проєкти",
       contact: "Зв'язатися",
+      downloadResume: "Завантажити резюме",
+      featuredTitle: "Вибрані проєкти",
+      featuredSubtitle:
+        "Кілька проєктів, які добре показують мою роботу з інтерфейсами, API та frontend-задачами.",
+      stackTitle: "Основний стек",
+      stackText:
+        "Працюю з сучасним frontend-стеком, повторно використовуваними компонентами та охайною інтеграцією з бекендом.",
+      stackItems: [
+        "React і TypeScript",
+        "Інтеграція REST API",
+        "Адаптивна верстка",
+        "Повторно використовувані UI-компоненти",
+        "Співпраця через GitHub",
+        "Реалізація макетів із Figma",
+      ],
+      highlights: [
+        { value: "7+", label: "проєктів у портфоліо" },
+        { value: "React", label: "основний frontend-фокус" },
+        { value: "REST API", label: "практична інтеграція" },
+      ],
+      aboutTitle: "Як я працюю",
+      aboutText:
+        "Мені подобаються інтерфейси, які виглядають зрозуміло, працюють передбачувано й не ускладнюють зайве. Я ціную адаптивність, підтримувану структуру коду та спокійний командний workflow.",
+      aboutAction: "Більше про мене",
     },
     projects: {
       title: "Проєкти",
@@ -83,14 +145,26 @@
     },
     about: {
       title: "Про мене",
-      intro:
-        "Я створюю адаптивні інтерфейси на React і TypeScript та люблю перетворювати охайні макети на зрозумілі й практичні сценарії для користувача.",
+      introLead:
+        "Я junior frontend developer, який фокусується на React, TypeScript і практичних інтерфейсах для реальних задач.",
+      introBody:
+        "Мені подобається створювати адаптивні сторінки, працювати з API-даними та перетворювати охайні макети на зрозумілий користувацький досвід. Найкраще я працюю там, де можна поєднати чітку структуру, увагу до деталей і стабільну реалізацію задач.",
       summaryTitle: "На чому я фокусуюсь",
       summaryItems: [
         "Адаптивний frontend з увагою до деталей",
         "Повторно використовувані компоненти та підтримувана структура",
         "Практичний досвід з REST API та автентифікацією",
       ],
+      goalsTitle: "Що я зараз шукаю",
+      goalsItems: [
+        "Junior frontend можливості",
+        "Стажування або trainee-роль",
+        "Freelance-задачі, де важливий охайний UI",
+      ],
+      resumeTitle: "Резюме",
+      resumeText:
+        "Коротка версія мого досвіду, стеку та проєктів в одному файлі.",
+      downloadResume: "Завантажити резюме",
       contactTitle: "Контакти",
       contactText:
         "Якщо у вас є стажування, junior-позиція або невеликий freelance-запит, я відкритий до розмови.",
