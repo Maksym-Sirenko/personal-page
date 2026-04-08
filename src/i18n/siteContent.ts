@@ -16,21 +16,9 @@
         "I build responsive interfaces with React and TypeScript, and I enjoy turning clean layouts into practical user flows.",
       viewProjects: "View Projects",
       contact: "Contact Me",
-      downloadResume: "Download Resume",
       featuredTitle: "Featured Projects",
       featuredSubtitle:
         "A few projects that show how I work with interfaces, APIs, and product-focused frontend tasks.",
-      stackTitle: "Core Stack",
-      stackText:
-        "I work with modern frontend tools, reusable components, and clean integration with backend services.",
-      stackItems: [
-        "React and TypeScript",
-        "REST API integration",
-        "Responsive layout",
-        "Reusable UI components",
-        "GitHub collaboration",
-        "Figma-based implementation",
-      ],
       highlights: [
         { value: "7+", label: "portfolio projects" },
         { value: "React", label: "main frontend focus" },
@@ -69,10 +57,10 @@
         "Internship or trainee roles",
         "Freelance tasks where clear UI matters",
       ],
-      resumeTitle: "Resume",
-      resumeText:
-        "A short version of my experience, skills, and project work in one place.",
-      downloadResume: "Download Resume",
+      certificateTitle: "Certificate",
+      certificateText:
+        "GoIT Fullstack Developer Course certificate with completed modules in HTML, CSS, JavaScript, React, Next.js, TypeScript, and Node.js.",
+      viewCertificate: "View Certificate",
       contactTitle: "Contact",
       contactText:
         "If you have an internship, junior role, or freelance task in mind, I am open to a conversation.",
@@ -108,21 +96,9 @@
         "Я створюю адаптивні інтерфейси на React і TypeScript та люблю перетворювати охайні макети на практичні й зрозумілі сценарії для користувача.",
       viewProjects: "Переглянути проєкти",
       contact: "Зв'язатися",
-      downloadResume: "Завантажити резюме",
       featuredTitle: "Вибрані проєкти",
       featuredSubtitle:
         "Кілька проєктів, які добре показують мою роботу з інтерфейсами, API та frontend-задачами.",
-      stackTitle: "Основний стек",
-      stackText:
-        "Працюю з сучасним frontend-стеком, повторно використовуваними компонентами та охайною інтеграцією з бекендом.",
-      stackItems: [
-        "React і TypeScript",
-        "Інтеграція REST API",
-        "Адаптивна верстка",
-        "Повторно використовувані UI-компоненти",
-        "Співпраця через GitHub",
-        "Реалізація макетів із Figma",
-      ],
       highlights: [
         { value: "7+", label: "проєктів у портфоліо" },
         { value: "React", label: "основний frontend-фокус" },
@@ -161,10 +137,10 @@
         "Стажування або trainee-роль",
         "Freelance-задачі, де важливий охайний UI",
       ],
-      resumeTitle: "Резюме",
-      resumeText:
-        "Коротка версія мого досвіду, стеку та проєктів в одному файлі.",
-      downloadResume: "Завантажити резюме",
+      certificateTitle: "Сертифікат",
+      certificateText:
+        "Сертифікат GoIT Fullstack Developer Course із завершеними модулями з HTML, CSS, JavaScript, React, Next.js, TypeScript та Node.js.",
+      viewCertificate: "Переглянути сертифікат",
       contactTitle: "Контакти",
       contactText:
         "Якщо у вас є стажування, junior-позиція або невеликий freelance-запит, я відкритий до розмови.",

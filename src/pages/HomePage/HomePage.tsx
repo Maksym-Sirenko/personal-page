@@ -14,7 +14,6 @@ type OutletContextType = {
 };
 
 const featuredProjectIds = ["travel-trucks", "leleka-app", "notehub"];
-const resumeHref = "/documents/maksym-sirenko-resume.pdf";
 const heroImageSrc = "/profile/maksym-hero.jpg";
 
 function HomePage() {
@@ -53,16 +52,6 @@ function HomePage() {
                   <Button to="/about#contact" variant="secondary" className={styles.actionButton}>
                     {t.contact}
                   </Button>
-
-                  <Button
-                    href={resumeHref}
-                    target="_self"
-                    download
-                    variant="secondary"
-                    className={styles.actionButton}
-                  >
-                    {t.downloadResume}
-                  </Button>
                 </div>
 
                 <div className={styles.highlights}>
@@ -76,11 +65,13 @@ function HomePage() {
               </div>
 
               <div className={styles.heroVisual}>
-                <img
-                  src={heroImageSrc}
-                  alt="Maksym Sirenko portrait"
-                  className={styles.heroImage}
-                />
+                <div className={styles.imageFrame}>
+                  <img
+                    src={heroImageSrc}
+                    alt="Maksym Sirenko portrait"
+                    className={styles.heroImage}
+                  />
+                </div>
               </div>
             </div>
           </div>

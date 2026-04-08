@@ -8,7 +8,7 @@ type OutletContextType = {
   language: Language;
 };
 
-const resumeHref = "/documents/maksym-sirenko-resume.pdf";
+const certificateHref = "/documents/maksym-sirenko-certificate.pdf";
 
 function AboutPage() {
   const { language } = useOutletContext<OutletContextType>();
@@ -50,11 +50,11 @@ function AboutPage() {
             </div>
 
             <div className={styles.card}>
-              <h2 className={styles.cardTitle}>{t.resumeTitle}</h2>
-              <p className={styles.cardText}>{t.resumeText}</p>
+              <h2 className={styles.cardTitle}>{t.certificateTitle}</h2>
+              <p className={styles.cardText}>{t.certificateText}</p>
               <div className={styles.singleAction}>
-                <Button href={resumeHref} target="_self" download variant="primary">
-                  {t.downloadResume}
+                <Button href={certificateHref} target="_blank" variant="primary">
+                  {t.viewCertificate}
                 </Button>
               </div>
             </div>
