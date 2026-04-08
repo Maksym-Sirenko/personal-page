@@ -5,7 +5,7 @@ import Container from "../../ui/Container/Container";
 import Button from "../../ui/Button/Button";
 import SVGIcon from "../../ui/SVGIcon/SVGIcon";
 import Drawer from "../../ui/Drawer/Drawer";
-import { translations, type Language } from "../../../i18n/translations";
+import { siteContent, type Language } from "../../../i18n/siteContent";
 import styles from "./Header.module.scss";
 
 type HeaderProps = {
@@ -16,7 +16,7 @@ type HeaderProps = {
 function Header({ language, setLanguage }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const t = translations[language];
+  const t = siteContent[language];
 
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
@@ -63,12 +63,15 @@ function Header({ language, setLanguage }: HeaderProps) {
               </li>
             </ul>
 
-            <Button variant="secondary">{t.nav.contact}</Button>
+            <Button to="/about#contact" variant="secondary">
+              {t.nav.contact}
+            </Button>
 
             <button
               type="button"
               className={styles.languageButton}
               onClick={toggleLanguage}
+              aria-label={t.nav.switchLanguage}
             >
               {language === "en" ? "UA" : "EN"}
             </button>
@@ -78,7 +81,7 @@ function Header({ language, setLanguage }: HeaderProps) {
             type="button"
             className={styles.menuButton}
             onClick={toggleMenu}
-            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={isMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
           >
@@ -87,7 +90,7 @@ function Header({ language, setLanguage }: HeaderProps) {
         </div>
       </Container>
 
-      <Drawer isOpen={isMenuOpen} onClose={closeMenu}>
+      <Drawer isOpen={isMenuOpen} onClose={closeMenu} language={language}>
         <nav id="mobile-navigation" className={styles.mobileNav}>
           <ul className={styles.mobileNavList}>
             <li>
@@ -110,6 +113,7 @@ function Header({ language, setLanguage }: HeaderProps) {
           </ul>
 
           <Button
+            to="/about#contact"
             variant="secondary"
             className={styles.mobileContactButton}
             onClick={closeMenu}
@@ -121,6 +125,7 @@ function Header({ language, setLanguage }: HeaderProps) {
             type="button"
             className={styles.languageButton}
             onClick={toggleLanguage}
+            aria-label={t.nav.switchLanguage}
           >
             {language === "en" ? "UA" : "EN"}
           </button>
