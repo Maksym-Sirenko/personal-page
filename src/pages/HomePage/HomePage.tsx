@@ -15,6 +15,7 @@ type OutletContextType = {
 
 const featuredProjectIds = ["travel-trucks", "leleka-app", "notehub"];
 const resumeHref = "/documents/maksym-sirenko-resume.pdf";
+const heroImageSrc = "/profile/maksym-hero.jpg";
 
 function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -37,40 +38,50 @@ function HomePage() {
     <main>
       <section className={styles.hero}>
         <Container>
-          <div className={styles.heroLayout}>
-            <div className={styles.heroContent}>
-              <p className={styles.eyebrow}>{t.role}</p>
-              <h1 className={styles.title}>{t.title}</h1>
-              <p className={styles.subtitle}>{t.subtitle}</p>
+          <div className={styles.heroShell}>
+            <div className={styles.heroLayout}>
+              <div className={styles.heroContent}>
+                <p className={styles.eyebrow}>{t.role}</p>
+                <h1 className={styles.title}>{t.title}</h1>
+                <p className={styles.subtitle}>{t.subtitle}</p>
 
-              <div className={styles.actions}>
-                <Button to="/projects" variant="primary" className={styles.actionButton}>
-                  {t.viewProjects}
-                </Button>
+                <div className={styles.actions}>
+                  <Button to="/projects" variant="primary" className={styles.actionButton}>
+                    {t.viewProjects}
+                  </Button>
 
-                <Button to="/about#contact" variant="secondary" className={styles.actionButton}>
-                  {t.contact}
-                </Button>
+                  <Button to="/about#contact" variant="secondary" className={styles.actionButton}>
+                    {t.contact}
+                  </Button>
 
-                <Button
-                  href={resumeHref}
-                  target="_self"
-                  download
-                  variant="secondary"
-                  className={styles.actionButton}
-                >
-                  {t.downloadResume}
-                </Button>
-              </div>
-            </div>
-
-            <div className={styles.highlights}>
-              {t.highlights.map((item) => (
-                <div key={item.label} className={styles.highlightItem}>
-                  <span className={styles.highlightValue}>{item.value}</span>
-                  <span className={styles.highlightLabel}>{item.label}</span>
+                  <Button
+                    href={resumeHref}
+                    target="_self"
+                    download
+                    variant="secondary"
+                    className={styles.actionButton}
+                  >
+                    {t.downloadResume}
+                  </Button>
                 </div>
-              ))}
+
+                <div className={styles.highlights}>
+                  {t.highlights.map((item) => (
+                    <div key={item.label} className={styles.highlightItem}>
+                      <span className={styles.highlightValue}>{item.value}</span>
+                      <span className={styles.highlightLabel}>{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className={styles.heroVisual}>
+                <img
+                  src={heroImageSrc}
+                  alt="Maksym Sirenko portrait"
+                  className={styles.heroImage}
+                />
+              </div>
             </div>
           </div>
         </Container>
@@ -91,25 +102,6 @@ function HomePage() {
                 onOpenDetails={handleOpenDetails}
               />
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.section}>
-        <Container>
-          <div className={styles.infoGrid}>
-            <div>
-              <h2 className={styles.sectionTitle}>{t.stackTitle}</h2>
-              <p className={styles.sectionText}>{t.stackText}</p>
-            </div>
-
-            <ul className={styles.stackList}>
-              {t.stackItems.map((item) => (
-                <li key={item} className={styles.stackItem}>
-                  {item}
-                </li>
-              ))}
-            </ul>
           </div>
         </Container>
       </section>
