@@ -2,17 +2,17 @@ import { useState } from "react";
 import Container from "../../components/ui/Container/Container";
 import ProjectCard from "../../components/project/ProjectCard/ProjectCard";
 import ProjectModal from "../../components/project/ProjectModal/ProjectModal";
-import { projects } from "../../data/projects";
+import { projectsContent } from "../../data/projectsContent";
 import type { Project } from "../../types/project";
 import styles from "./ProjectsPage.module.scss";
-import { translations, type Language } from "../../i18n/translations";
+import { siteContent, type Language } from "../../i18n/siteContent";
 import { useOutletContext } from "react-router-dom";
 
 function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const { language } = useOutletContext<{ language: Language }>();
-  const t = translations[language].projects;
+  const t = siteContent[language].projects;
 
   const handleOpenDetails = (project: Project) => {
     setSelectedProject(project);
@@ -31,7 +31,7 @@ function ProjectsPage() {
           <p className={styles.subtitle}>{t.subtitle}</p>
 
           <div className={styles.grid}>
-            {projects.map((project) => (
+            {projectsContent.map((project) => (
               <ProjectCard
                 key={project.id}
                 project={project}

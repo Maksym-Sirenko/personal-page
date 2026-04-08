@@ -1,7 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import Container from "../../components/ui/Container/Container";
 import Button from "../../components/ui/Button/Button";
-import { translations, type Language } from "../../i18n/translations";
+import { siteContent, type Language } from "../../i18n/siteContent";
 import styles from "./HomePage.module.scss";
 
 type OutletContextType = {
@@ -10,7 +10,7 @@ type OutletContextType = {
 
 function HomePage() {
   const { language } = useOutletContext<OutletContextType>();
-  const t = translations[language];
+  const t = siteContent[language];
 
   return (
     <main>
@@ -30,7 +30,11 @@ function HomePage() {
                 {t.home.viewProjects}
               </Button>
 
-              <Button variant="secondary" className={styles.actionButton}>
+              <Button
+                to="/about#contact"
+                variant="secondary"
+                className={styles.actionButton}
+              >
                 {t.home.contact}
               </Button>
             </div>
