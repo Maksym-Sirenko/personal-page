@@ -15,6 +15,7 @@ type OutletContextType = {
 
 const featuredProjectIds = ["travel-trucks", "leleka-app", "notehub"];
 const heroImageSrc = "/profile/maksym-hero.jpg";
+const resumeHref = "/documents/maksym-sirenko-resume.pdf";
 
 function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -51,6 +52,16 @@ function HomePage() {
 
                   <Button to="/about#contact" variant="secondary" className={styles.actionButton}>
                     {t.contact}
+                  </Button>
+
+                  <Button
+                    href={resumeHref}
+                    target="_blank"
+                    download
+                    variant="secondary"
+                    className={styles.actionButton}
+                  >
+                    {t.downloadResume}
                   </Button>
                 </div>
 

@@ -8,6 +8,7 @@ type OutletContextType = {
   language: Language;
 };
 
+const resumeHref = "/documents/maksym-sirenko-resume.pdf";
 const certificateHref = "/documents/maksym-sirenko-certificate.pdf";
 
 function AboutPage() {
@@ -50,10 +51,21 @@ function AboutPage() {
             </div>
 
             <div className={styles.card}>
-              <h2 className={styles.cardTitle}>{t.certificateTitle}</h2>
-              <p className={styles.cardText}>{t.certificateText}</p>
-              <div className={styles.singleAction}>
-                <Button href={certificateHref} target="_blank" variant="primary">
+              <h2 className={styles.cardTitle}>{t.documentsTitle}</h2>
+              <p className={styles.cardText}>{t.documentsText}</p>
+
+              <div className={styles.documentBlock}>
+                <h3 className={styles.documentTitle}>{t.resumeLabel}</h3>
+                <p className={styles.documentText}>{t.resumeText}</p>
+                <Button href={resumeHref} target="_blank" download variant="primary">
+                  {t.downloadResume}
+                </Button>
+              </div>
+
+              <div className={styles.documentBlock}>
+                <h3 className={styles.documentTitle}>{t.certificateLabel}</h3>
+                <p className={styles.documentText}>{t.certificateText}</p>
+                <Button href={certificateHref} target="_blank" variant="secondary">
                   {t.viewCertificate}
                 </Button>
               </div>

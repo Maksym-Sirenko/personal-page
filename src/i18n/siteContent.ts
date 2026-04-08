@@ -16,6 +16,7 @@
         "I build responsive interfaces with React and TypeScript, and I enjoy turning clean layouts into practical user flows.",
       viewProjects: "View Projects",
       contact: "Contact Me",
+      downloadResume: "Download Resume",
       featuredTitle: "Featured Projects",
       featuredSubtitle:
         "A few projects that show how I work with interfaces, APIs, and product-focused frontend tasks.",
@@ -57,9 +58,16 @@
         "Internship or trainee roles",
         "Freelance tasks where clear UI matters",
       ],
-      certificateTitle: "Certificate",
+      documentsTitle: "Resume & Certificate",
+      documentsText:
+        "You can view my updated resume and the GoIT Fullstack Developer Course certificate in one place.",
+      resumeLabel: "Resume",
+      certificateLabel: "Certificate",
+      resumeText:
+        "Updated PDF with experience, stack, projects, and contact details.",
       certificateText:
         "GoIT Fullstack Developer Course certificate with completed modules in HTML, CSS, JavaScript, React, Next.js, TypeScript, and Node.js.",
+      downloadResume: "Download Resume",
       viewCertificate: "View Certificate",
       contactTitle: "Contact",
       contactText:
@@ -96,6 +104,7 @@
         "Я створюю адаптивні інтерфейси на React і TypeScript та люблю перетворювати охайні макети на практичні й зрозумілі сценарії для користувача.",
       viewProjects: "Переглянути проєкти",
       contact: "Зв'язатися",
+      downloadResume: "Завантажити резюме",
       featuredTitle: "Вибрані проєкти",
       featuredSubtitle:
         "Кілька проєктів, які добре показують мою роботу з інтерфейсами, API та frontend-задачами.",
@@ -137,9 +146,16 @@
         "Стажування або trainee-роль",
         "Freelance-задачі, де важливий охайний UI",
       ],
-      certificateTitle: "Сертифікат",
+      documentsTitle: "Резюме та сертифікат",
+      documentsText:
+        "Тут можна відкрити актуальне резюме та сертифікат GoIT Fullstack Developer Course.",
+      resumeLabel: "Резюме",
+      certificateLabel: "Сертифікат",
+      resumeText:
+        "Актуальний PDF із досвідом, стеком, проєктами та контактами.",
       certificateText:
         "Сертифікат GoIT Fullstack Developer Course із завершеними модулями з HTML, CSS, JavaScript, React, Next.js, TypeScript та Node.js.",
+      downloadResume: "Завантажити резюме",
       viewCertificate: "Переглянути сертифікат",
       contactTitle: "Контакти",
       contactText:

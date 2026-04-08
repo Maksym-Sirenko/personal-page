@@ -59,6 +59,26 @@
   gap: 20px;
 }
 
+.documentBlock + .documentBlock {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.documentTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #111827;
+}
+
+.documentText {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
