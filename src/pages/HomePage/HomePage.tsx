@@ -17,9 +17,11 @@ type OutletContextType = {
 const featuredProjectIds = ["travel-trucks", "leleka-app", "notehub"];
 const heroImageSrc = "/profile/maksym-hero.jpg";
 const resumeHref = "/documents/maksym-sirenko-resume.pdf";
+const MODAL_EXIT_DELAY = 320;
 
 function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { language } = useOutletContext<OutletContextType>();
   const t = siteContent[language].home;
 
@@ -29,10 +31,14 @@ function HomePage() {
 
   const handleOpenDetails = (project: Project) => {
     setSelectedProject(project);
+    setIsModalOpen(true);
   };
 
   const handleCloseDetails = () => {
-    setSelectedProject(null);
+    setIsModalOpen(false);
+    window.setTimeout(() => {
+      setSelectedProject(null);
+    }, MODAL_EXIT_DELAY);
   };
 
   return (
@@ -126,7 +132,7 @@ function HomePage() {
 
       <ProjectModal
         project={selectedProject}
-        isOpen={selectedProject !== null}
+        isOpen={isModalOpen}
         onClose={handleCloseDetails}
       />
       <ScrollTopButton language={language} />

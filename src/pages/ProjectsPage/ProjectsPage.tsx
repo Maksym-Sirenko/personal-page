@@ -11,16 +11,22 @@ import styles from "./ProjectsPage.module.scss";
 
 function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalExitDelay = 320;
 
   const { language } = useOutletContext<{ language: Language }>();
   const t = siteContent[language].projects;
 
   const handleOpenDetails = (project: Project) => {
     setSelectedProject(project);
+    setIsModalOpen(true);
   };
 
   const handleCloseDetails = () => {
-    setSelectedProject(null);
+    setIsModalOpen(false);
+    window.setTimeout(() => {
+      setSelectedProject(null);
+    }, modalExitDelay);
   };
 
   return (
@@ -47,7 +53,7 @@ function ProjectsPage() {
 
       <ProjectModal
         project={selectedProject}
-        isOpen={selectedProject !== null}
+        isOpen={isModalOpen}
         onClose={handleCloseDetails}
       />
     </main>
