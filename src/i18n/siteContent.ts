@@ -85,6 +85,7 @@
       closeModal: "Close modal",
       modalLabel: "Dialog window",
       navigationLabel: "Mobile navigation",
+      backToTop: "Back to top",
     },
   },
   ua: {
@@ -173,6 +174,7 @@
       closeModal: "Закрити модальне вікно",
       modalLabel: "Діалогове вікно",
       navigationLabel: "Мобільна навігація",
+      backToTop: "Повернутися нагору",
     },
   },
 } as const;

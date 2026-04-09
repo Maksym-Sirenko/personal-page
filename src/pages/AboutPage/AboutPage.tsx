@@ -1,6 +1,7 @@
-﻿import { useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import Container from "../../components/ui/Container/Container";
 import Button from "../../components/ui/Button/Button";
+import ScrollTopButton from "../../components/ui/ScrollTopButton/ScrollTopButton";
 import { siteContent, type Language } from "../../i18n/siteContent";
 import styles from "./AboutPage.module.scss";
 
@@ -101,8 +102,10 @@ function AboutPage() {
           </div>
         </Container>
       </section>
+      <ScrollTopButton language={language} />
     </main>
   );
 }
 
 export default AboutPage;
+

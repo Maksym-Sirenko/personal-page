@@ -4,6 +4,7 @@ import Container from "../../components/ui/Container/Container";
 import Button from "../../components/ui/Button/Button";
 import ProjectCard from "../../components/project/ProjectCard/ProjectCard";
 import ProjectModal from "../../components/project/ProjectModal/ProjectModal";
+import ScrollTopButton from "../../components/ui/ScrollTopButton/ScrollTopButton";
 import { projectsContent } from "../../data/projectsContent";
 import type { Project } from "../../types/project";
 import { siteContent, type Language } from "../../i18n/siteContent";
@@ -128,6 +129,7 @@ function HomePage() {
         isOpen={selectedProject !== null}
         onClose={handleCloseDetails}
       />
+      <ScrollTopButton language={language} />
     </main>
   );
 }
