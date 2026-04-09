@@ -17,7 +17,7 @@ type OutletContextType = {
 const featuredProjectIds = ["travel-trucks", "leleka-app", "notehub"];
 const heroImageSrc = "/profile/maksym-hero.jpg";
 const resumeHref = "/documents/maksym-sirenko-resume.pdf";
-const MODAL_EXIT_DELAY = 320;
+const MODAL_EXIT_DELAY = 420;
 
 function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);

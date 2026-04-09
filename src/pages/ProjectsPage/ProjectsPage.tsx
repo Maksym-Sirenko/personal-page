@@ -12,7 +12,7 @@ import styles from "./ProjectsPage.module.scss";
 function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const modalExitDelay = 320;
+  const modalExitDelay = 420;
 
   const { language } = useOutletContext<{ language: Language }>();
   const t = siteContent[language].projects;

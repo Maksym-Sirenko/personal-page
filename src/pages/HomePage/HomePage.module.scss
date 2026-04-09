@@ -99,9 +99,9 @@
 .heroVisual::before {
   content: "";
   position: absolute;
-  inset: 36px 0 0 48px;
+  inset: 42px 12px 12px 54px;
   border-radius: 8px;
-  background: linear-gradient(180deg, rgba(219, 234, 254, 0.95), rgba(239, 246, 255, 0.65));
+  background: linear-gradient(180deg, rgba(219, 234, 254, 0.55), rgba(239, 246, 255, 0.28));
 }
 
 .imageFrame {
@@ -111,7 +111,7 @@
   border: 1px solid rgba(219, 234, 254, 0.9);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.035);
   background-color: rgba(255, 255, 255, 0.92);
 }
 

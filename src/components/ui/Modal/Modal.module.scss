@@ -5,7 +5,7 @@
   width: min(92vw, 720px);
   max-height: 85vh;
   overflow-y: auto;
-  transform: translate(-50%, calc(-50% + 14px)) scale(0.985);
+  transform: translate(-50%, calc(-50% + 18px)) scale(0.992);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -14,9 +14,9 @@
   border-radius: 24px;
   box-shadow: 0 24px 60px rgba(17, 24, 39, 0.18);
   transition:
-    opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
-    visibility 0.32s ease;
+    opacity 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.42s ease;
   z-index: 140;
   will-change: opacity, transform;
 }
