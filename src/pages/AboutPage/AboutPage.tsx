@@ -93,38 +93,47 @@ function AboutPage() {
               <p className={styles.contactText}>{t.contactText}</p>
             </div>
 
-            <div className={styles.actions}>
-              <Button
-                href="mailto:maksym.sirenko.dev@gmail.com"
-                variant="primary"
-                className={styles.primaryContact}
-              >
-                {t.email}
-              </Button>
-              <Button
-                href="https://github.com/Maksym-Sirenko"
-                variant="secondary"
-                className={styles.contactButton}
-              >
-                {t.github}
-              </Button>
-              <Button
-                href="https://www.linkedin.com/in/maksym-sirenko/"
-                variant="secondary"
-                className={styles.contactButton}
-              >
-                {t.linkedin}
-              </Button>
-              <Button
-                href="https://t.me/Yambren"
-                variant="secondary"
-                className={styles.contactButton}
-              >
-                {t.telegram}
-              </Button>
-              <Button to="/projects" variant="secondary" className={styles.contactButton}>
-                {t.projectsLink}
-              </Button>
+            <div className={styles.actionStack}>
+              <div className={styles.primaryRow}>
+                <Button
+                  href="mailto:maksym.sirenko.dev@gmail.com"
+                  variant="primary"
+                  className={styles.primaryContact}
+                >
+                  {t.email}
+                </Button>
+                <Button
+                  to="/projects"
+                  variant="secondary"
+                  className={styles.projectButton}
+                >
+                  {t.projectsLink}
+                </Button>
+              </div>
+
+              <div className={styles.socialRow}>
+                <Button
+                  href="https://github.com/Maksym-Sirenko"
+                  variant="secondary"
+                  className={styles.contactButton}
+                >
+                  {t.github}
+                </Button>
+                <Button
+                  href="https://www.linkedin.com/in/maksym-sirenko/"
+                  variant="secondary"
+                  className={styles.contactButton}
+                >
+                  {t.linkedin}
+                </Button>
+                <Button
+                  href="https://t.me/Yambren"
+                  variant="secondary"
+                  className={styles.contactButton}
+                >
+                  {t.telegram}
+                </Button>
+              </div>
             </div>
           </div>
         </Container>
