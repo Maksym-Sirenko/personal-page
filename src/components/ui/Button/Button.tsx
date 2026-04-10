@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import clsx from "clsx";
 import styles from "./Button.module.scss";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "soft" | "ghost";
 
 type BaseProps = {
   children: ReactNode;

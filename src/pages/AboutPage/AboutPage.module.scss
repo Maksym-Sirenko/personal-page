@@ -147,9 +147,11 @@
 
 .documentButton {
   width: 100%;
-  min-height: 56px;
+  min-height: 68px;
+  padding-inline: 18px;
   margin-top: auto;
   font-size: 15px;
+  text-align: center;
 }
 
 .actionStack {
@@ -178,9 +180,6 @@
 .contactButton {
   width: 100%;
   min-height: 46px;
-  border: 1px solid #e5e7eb;
-  background-color: #f8fafc;
-  color: #111827;
 }
 
 .contactCopy {
