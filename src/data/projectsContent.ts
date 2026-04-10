@@ -10,6 +10,10 @@ export const projectsContent: Project[] = [
       en: "Camper rental platform with filtering, API integration, dynamic routing, and booking flow.",
     },
     coverImage: "/projects/travel-trucks/travel-trucks-cover.jpg",
+    galleryImages: [
+      "/projects/travel-trucks/travel-trucks-catalog.jpg",
+      "/projects/travel-trucks/travel-trucks-details.jpg",
+    ],
     stack: ["Next.js", "React", "TypeScript", "Zustand", "Axios", "CSS", "Figma"],
     responsibilities: {
       ua: [
@@ -37,6 +41,7 @@ export const projectsContent: Project[] = [
       en: "Fullstack team project with reusable UI components, modal system, and responsive interface built from Figma.",
     },
     coverImage: "/projects/leleka-app/leleka-app-cover.jpg",
+    galleryImages: ["/projects/leleka-app/leleka-app-modal.jpg"],
     stack: ["Next.js", "React", "TypeScript", "Axios", "CSS", "Figma"],
     responsibilities: {
       ua: [
@@ -91,6 +96,7 @@ export const projectsContent: Project[] = [
       en: "Team website with responsive layout, pagination, and performers cards section.",
     },
     coverImage: "/projects/artistshub/artistshub-cover.jpg",
+    galleryImages: ["/projects/artistshub/artistshub-artists.jpg"],
     stack: ["HTML", "CSS", "JavaScript", "GitHub", "Figma"],
     responsibilities: {
       ua: [
@@ -116,6 +122,7 @@ export const projectsContent: Project[] = [
       en: "Interactive image gallery with modal preview and external library integration.",
     },
     coverImage: "/projects/gallery-lightbox/gallery-lightbox-cover.jpg",
+    galleryImages: ["/projects/gallery-lightbox/gallery-lightbox-search.jpg"],
     stack: ["JavaScript", "SimpleLightbox", "HTML", "CSS", "GitHub"],
     responsibilities: {
       ua: [
@@ -143,6 +150,7 @@ export const projectsContent: Project[] = [
       en: "Responsive business landing page based on Figma design with semantic HTML structure.",
     },
     coverImage: "/projects/webstudio/webstudio-cover.jpg",
+    galleryImages: ["/projects/webstudio/webstudio-portfolio.jpg"],
     stack: ["HTML", "CSS", "Responsive Design", "GitHub", "Figma"],
     responsibilities: {
       ua: [

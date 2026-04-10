@@ -17,6 +17,10 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   if (!project) return null;
 
+  const modalImages = [project.coverImage, ...(project.galleryImages ?? [])].filter(
+    (image): image is string => Boolean(image)
+  );
+
   return (
     <Modal
       isOpen={isOpen}
@@ -30,6 +34,32 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           {project.title[language]}
         </h2>
         <p className={styles.description}>{project.description[language]}</p>
+
+        {modalImages.length > 0 && (
+          <div className={styles.gallery}>
+            <div className={styles.primaryImageWrap}>
+              <img
+                src={modalImages[0]}
+                alt={`${project.title[language]} preview`}
+                className={styles.primaryImage}
+              />
+            </div>
+
+            {modalImages.length > 1 && (
+              <div className={styles.galleryGrid}>
+                {modalImages.slice(1).map((image, index) => (
+                  <div key={image} className={styles.galleryItem}>
+                    <img
+                      src={image}
+                      alt={`${project.title[language]} screen ${index + 2}`}
+                      className={styles.galleryImage}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         <div className={styles.block}>
           <h3 className={styles.blockTitle}>{t.techStack}</h3>
@@ -52,11 +82,11 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         </div>
 
         <div className={styles.actions}>
-          <Button href={project.liveDemo} variant="primary">
+          <Button href={project.liveDemo} variant="primary" className={styles.actionButton}>
             {t.liveDemo}
           </Button>
 
-          <Button href={project.github} variant="secondary">
+          <Button href={project.github} variant="secondary" className={styles.actionButton}>
             {t.github}
           </Button>
         </div>
