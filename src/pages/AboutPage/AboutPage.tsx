@@ -22,6 +22,7 @@ function AboutPage() {
         <Container>
           <div className={styles.hero}>
             <div className={styles.copy}>
+              <p className={styles.eyebrow}>Junior Frontend Developer</p>
               <h1 className={styles.title}>{t.title}</h1>
               <p className={styles.introLead}>{t.introLead}</p>
               <p className={styles.introBody}>{t.introBody}</p>
@@ -29,9 +30,9 @@ function AboutPage() {
 
             <div className={styles.card}>
               <h2 className={styles.cardTitle}>{t.summaryTitle}</h2>
-              <ul className={styles.list}>
+              <ul className={styles.focusList}>
                 {t.summaryItems.map((item) => (
-                  <li key={item} className={styles.listItem}>
+                  <li key={item} className={styles.focusItem}>
                     {item}
                   </li>
                 ))}
@@ -42,16 +43,16 @@ function AboutPage() {
           <div className={styles.grid}>
             <div className={styles.card}>
               <h2 className={styles.cardTitle}>{t.goalsTitle}</h2>
-              <ul className={styles.list}>
+              <ul className={styles.goalList}>
                 {t.goalsItems.map((item) => (
-                  <li key={item} className={styles.listItem}>
+                  <li key={item} className={styles.goalItem}>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className={styles.card}>
+            <div className={styles.documentCard}>
               <h2 className={styles.cardTitle}>{t.documentsTitle}</h2>
               <p className={styles.cardText}>{t.documentsText}</p>
 
@@ -59,7 +60,13 @@ function AboutPage() {
                 <div className={styles.documentBlock}>
                   <h3 className={styles.documentTitle}>{t.resumeLabel}</h3>
                   <p className={styles.documentText}>{t.resumeText}</p>
-                  <Button href={resumeHref} target="_blank" download variant="primary">
+                  <Button
+                    href={resumeHref}
+                    target="_blank"
+                    download
+                    variant="primary"
+                    className={styles.documentButton}
+                  >
                     {t.downloadResume}
                   </Button>
                 </div>
@@ -67,7 +74,12 @@ function AboutPage() {
                 <div className={styles.documentBlock}>
                   <h3 className={styles.documentTitle}>{t.certificateLabel}</h3>
                   <p className={styles.documentText}>{t.certificateText}</p>
-                  <Button href={certificateHref} target="_blank" variant="secondary">
+                  <Button
+                    href={certificateHref}
+                    target="_blank"
+                    variant="secondary"
+                    className={styles.documentButton}
+                  >
                     {t.viewCertificate}
                   </Button>
                 </div>
@@ -82,22 +94,35 @@ function AboutPage() {
             </div>
 
             <div className={styles.actions}>
-              <Button href="mailto:maksym.sirenko.dev@gmail.com" variant="primary">
+              <Button
+                href="mailto:maksym.sirenko.dev@gmail.com"
+                variant="primary"
+                className={styles.primaryContact}
+              >
                 {t.email}
               </Button>
-              <Button href="https://github.com/Maksym-Sirenko" variant="secondary">
+              <Button
+                href="https://github.com/Maksym-Sirenko"
+                variant="secondary"
+                className={styles.contactButton}
+              >
                 {t.github}
               </Button>
               <Button
                 href="https://www.linkedin.com/in/maksym-sirenko/"
                 variant="secondary"
+                className={styles.contactButton}
               >
                 {t.linkedin}
               </Button>
-              <Button href="https://t.me/Yambren" variant="secondary">
+              <Button
+                href="https://t.me/Yambren"
+                variant="secondary"
+                className={styles.contactButton}
+              >
                 {t.telegram}
               </Button>
-              <Button to="/projects" variant="secondary">
+              <Button to="/projects" variant="secondary" className={styles.contactButton}>
                 {t.projectsLink}
               </Button>
             </div>
