@@ -114,21 +114,21 @@ function AboutPage() {
               <div className={styles.socialRow}>
                 <Button
                   href="https://github.com/Maksym-Sirenko"
-                  variant="secondary"
+                  variant="ghost"
                   className={styles.contactButton}
                 >
                   {t.github}
                 </Button>
                 <Button
                   href="https://www.linkedin.com/in/maksym-sirenko/"
-                  variant="secondary"
+                  variant="ghost"
                   className={styles.contactButton}
                 >
                   {t.linkedin}
                 </Button>
                 <Button
                   href="https://t.me/Yambren"
-                  variant="secondary"
+                  variant="ghost"
                   className={styles.contactButton}
                 >
                   {t.telegram}
