@@ -111,6 +111,7 @@
   display: grid;
   gap: 16px;
   margin-top: 16px;
+  align-items: stretch;
 }
 
 .documentCard {
@@ -125,7 +126,9 @@
 .documentBlock {
   display: grid;
   gap: 12px;
+  grid-template-rows: auto 1fr auto;
   align-content: start;
+  height: 100%;
   padding: 16px;
   border: 1px solid #dbe3f0;
   border-radius: 8px;
@@ -150,6 +153,7 @@
 .documentButton {
   width: 100%;
   min-height: 48px;
+  margin-top: auto;
 }
 
 .actions {
