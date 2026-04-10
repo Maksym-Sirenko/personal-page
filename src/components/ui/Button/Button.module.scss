@@ -2,8 +2,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
-  border-radius: 12px;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 8px;
   border: 1px solid transparent;
   text-decoration: none;
   font-size: 16px;
@@ -30,15 +31,15 @@
 .primary {
   background-color: var(--accent);
   color: #ffffff;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.18);
+  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.16);
 }
 
 .primary:hover {
-  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.24);
+  box-shadow: 0 10px 22px rgba(59, 130, 246, 0.2);
 }
 
 .secondary {
-  background-color: transparent;
+  background-color: #ffffff;
   color: var(--text);
   border-color: #d1d5db;
 }
@@ -49,7 +50,7 @@
 }
 
 .soft {
-  background-color: #eff6ff;
+  background-color: #f5f9ff;
   color: #1d4ed8;
   border-color: #bfdbfe;
 }
