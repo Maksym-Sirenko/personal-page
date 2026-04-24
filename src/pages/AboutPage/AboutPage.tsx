@@ -20,6 +20,56 @@ function AboutPage() {
     <main>
       <section className={styles.section}>
         <Container>
+          <div id="contact" className={styles.contactCard}>
+            <div className={styles.contactCopy}>
+              <h2 className={styles.cardTitle}>{t.contactTitle}</h2>
+              <p className={styles.contactText}>{t.contactText}</p>
+            </div>
+
+            <div className={styles.actionStack}>
+              <div className={styles.primaryRow}>
+                <Button
+                  href="mailto:maksym.sirenko.dev@gmail.com"
+                  variant="primary"
+                  className={styles.primaryContact}
+                >
+                  {t.email}
+                </Button>
+                <Button
+                  to="/projects"
+                  variant="secondary"
+                  className={styles.projectButton}
+                >
+                  {t.projectsLink}
+                </Button>
+              </div>
+
+              <div className={styles.socialRow}>
+                <Button
+                  href="https://github.com/Maksym-Sirenko"
+                  variant="soft"
+                  className={styles.contactButton}
+                >
+                  {t.github}
+                </Button>
+                <Button
+                  href="https://www.linkedin.com/in/maksym-sirenko/"
+                  variant="soft"
+                  className={styles.contactButton}
+                >
+                  {t.linkedin}
+                </Button>
+                <Button
+                  href="https://t.me/Yambren"
+                  variant="soft"
+                  className={styles.contactButton}
+                >
+                  {t.telegram}
+                </Button>
+              </div>
+            </div>
+          </div>
+
           <div className={styles.hero}>
             <div className={styles.copy}>
               <p className={styles.eyebrow}>Junior Frontend Developer</p>
@@ -83,56 +133,6 @@ function AboutPage() {
                     {t.viewCertificate}
                   </Button>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="contact" className={styles.contactCard}>
-            <div className={styles.contactCopy}>
-              <h2 className={styles.cardTitle}>{t.contactTitle}</h2>
-              <p className={styles.contactText}>{t.contactText}</p>
-            </div>
-
-            <div className={styles.actionStack}>
-              <div className={styles.primaryRow}>
-                <Button
-                  href="mailto:maksym.sirenko.dev@gmail.com"
-                  variant="primary"
-                  className={styles.primaryContact}
-                >
-                  {t.email}
-                </Button>
-                <Button
-                  to="/projects"
-                  variant="secondary"
-                  className={styles.projectButton}
-                >
-                  {t.projectsLink}
-                </Button>
-              </div>
-
-              <div className={styles.socialRow}>
-                <Button
-                  href="https://github.com/Maksym-Sirenko"
-                  variant="soft"
-                  className={styles.contactButton}
-                >
-                  {t.github}
-                </Button>
-                <Button
-                  href="https://www.linkedin.com/in/maksym-sirenko/"
-                  variant="soft"
-                  className={styles.contactButton}
-                >
-                  {t.linkedin}
-                </Button>
-                <Button
-                  href="https://t.me/Yambren"
-                  variant="soft"
-                  className={styles.contactButton}
-                >
-                  {t.telegram}
-                </Button>
               </div>
             </div>
           </div>
