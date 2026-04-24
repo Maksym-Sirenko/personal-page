@@ -96,14 +96,6 @@
   padding: 0 24px 24px;
 }
 
-.heroVisual::before {
-  content: "";
-  position: absolute;
-  inset: 42px 12px 12px 54px;
-  border-radius: 8px;
-  background: linear-gradient(180deg, rgba(219, 234, 254, 0.55), rgba(239, 246, 255, 0.28));
-}
-
 .imageFrame {
   position: relative;
   width: min(100%, 320px);
