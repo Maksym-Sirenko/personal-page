@@ -8,11 +8,14 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
+  cursor: default;
+  user-select: none;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 a {
   color: inherit;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -20,6 +23,7 @@ button,
 input,
 textarea,
 select {
+  cursor: pointer;
   font: inherit;
 }
 
