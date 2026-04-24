@@ -2,6 +2,7 @@
 import { useOutletContext } from "react-router-dom";
 import Container from "../../components/ui/Container/Container";
 import Button from "../../components/ui/Button/Button";
+import SVGIcon from "../../components/ui/SVGIcon/SVGIcon";
 import ProjectCard from "../../components/project/ProjectCard/ProjectCard";
 import ProjectModal from "../../components/project/ProjectModal/ProjectModal";
 import ScrollTopButton from "../../components/ui/ScrollTopButton/ScrollTopButton";
@@ -23,24 +24,28 @@ const contactLinks = [
   {
     href: "mailto:maksym.sirenko.dev@gmail.com",
     label: "Email",
-    shortLabel: "@",
+    icon: "icon-email",
   },
   {
     href: "https://github.com/Maksym-Sirenko",
     label: "GitHub",
-    shortLabel: "GH",
+    icon: "icon-github",
   },
   {
     href: "https://www.linkedin.com/in/maksym-sirenko/",
     label: "LinkedIn",
-    shortLabel: "in",
+    icon: "icon-linkedin",
   },
   {
     href: "https://t.me/Yambren",
     label: "Telegram",
-    shortLabel: "TG",
+    icon: "icon-telegram",
   },
-];
+] satisfies Array<{
+  href: string;
+  label: string;
+  icon: string;
+}>;
 
 function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -90,7 +95,7 @@ function HomePage() {
                         target={link.href.startsWith("http") ? "_blank" : undefined}
                         rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       >
-                        {link.shortLabel}
+                        <SVGIcon name={link.icon} className={styles.contactIcon} />
                       </a>
                     ))}
                   </div>
