@@ -63,7 +63,7 @@ function Header({ language, setLanguage }: HeaderProps) {
               </li>
             </ul>
 
-            <Button to="/about#contact" variant="secondary">
+            <Button to="/about#contact" variant="primary">
               {t.nav.contact}
             </Button>
 
@@ -114,7 +114,7 @@ function Header({ language, setLanguage }: HeaderProps) {
 
           <Button
             to="/about#contact"
-            variant="secondary"
+            variant="primary"
             className={styles.mobileContactButton}
             onClick={closeMenu}
           >

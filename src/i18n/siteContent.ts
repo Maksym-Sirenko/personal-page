@@ -11,7 +11,7 @@
     },
     home: {
       title: "Maksym Sirenko",
-      role: "Junior Frontend Developer | React • TypeScript • REST API",
+      role: "Frontend Developer | React • TypeScript • REST API",
       subtitle:
         "I build responsive interfaces with React and TypeScript, and I enjoy turning clean layouts into practical user flows.",
       viewProjects: "View Projects",
@@ -100,7 +100,7 @@
     },
     home: {
       title: "Максим Сіренко",
-      role: "Junior Frontend Developer | React • TypeScript • REST API",
+      role: "Frontend Developer | React • TypeScript • REST API",
       subtitle:
         "Я створюю адаптивні інтерфейси на React і TypeScript та люблю перетворювати охайні макети на практичні й зрозумілі сценарії для користувача.",
       viewProjects: "Переглянути проєкти",

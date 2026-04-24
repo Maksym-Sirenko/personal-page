@@ -1,5 +1,5 @@
-﻿.hero {
-  padding: 48px 0 28px;
+.hero {
+  padding: 28px 0 20px;
 }
 
 .heroShell {
@@ -7,7 +7,9 @@
   overflow: hidden;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  background-color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(255, 255, 255, 0.98)),
+    #f8fafc;
 }
 
 .heroLayout {
@@ -19,11 +21,11 @@
 }
 
 .eyebrow {
-  margin: 0 0 12px;
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 600;
-  color: #2563eb;
+  margin: 0 0 14px;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #111827;
 }
 
 .title {
@@ -58,10 +60,49 @@
   width: 100%;
 }
 
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.contactLink:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
 .highlights {
   display: grid;
   gap: 12px;
   margin-top: 24px;
+}
+
+.resumeButton {
+  width: 100%;
+  margin-top: 18px;
 }
 
 .highlightItem {
@@ -102,6 +143,7 @@
   border-radius: 8px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
 }
 
 .heroImage {
@@ -152,7 +194,7 @@
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 64px 0 32px;
+    padding: 40px 0 24px;
   }
 
   .heroLayout {
@@ -168,12 +210,18 @@
     font-size: 56px;
   }
 
+  .eyebrow {
+    font-size: 24px;
+  }
+
   .actions {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
   }
 
-  .actionButton {
+  .actionButton,
+  .resumeButton {
     width: auto;
   }
 
@@ -201,7 +249,7 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
-    padding: 80px 0 40px;
+    padding: 48px 0 28px;
   }
 
   .imageFrame {

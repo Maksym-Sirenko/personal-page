@@ -19,6 +19,29 @@ const heroImageSrc = "/profile/maksym-hero.jpg";
 const resumeHref = "/documents/maksym-sirenko-resume.pdf";
 const MODAL_EXIT_DELAY = 500;
 
+const contactLinks = [
+  {
+    href: "mailto:maksym.sirenko.dev@gmail.com",
+    label: "Email",
+    shortLabel: "@",
+  },
+  {
+    href: "https://github.com/Maksym-Sirenko",
+    label: "GitHub",
+    shortLabel: "GH",
+  },
+  {
+    href: "https://www.linkedin.com/in/maksym-sirenko/",
+    label: "LinkedIn",
+    shortLabel: "in",
+  },
+  {
+    href: "https://t.me/Yambren",
+    label: "Telegram",
+    shortLabel: "TG",
+  },
+];
+
 function HomePage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,19 +80,20 @@ function HomePage() {
                     {t.viewProjects}
                   </Button>
 
-                  <Button to="/about#contact" variant="secondary" className={styles.actionButton}>
-                    {t.contact}
-                  </Button>
-
-                  <Button
-                    href={resumeHref}
-                    target="_blank"
-                    download
-                    variant="secondary"
-                    className={styles.actionButton}
-                  >
-                    {t.downloadResume}
-                  </Button>
+                  <div className={styles.contactLinks} aria-label={t.contact}>
+                    {contactLinks.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        className={styles.contactLink}
+                        aria-label={link.label}
+                        target={link.href.startsWith("http") ? "_blank" : undefined}
+                        rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      >
+                        {link.shortLabel}
+                      </a>
+                    ))}
+                  </div>
                 </div>
 
                 <div className={styles.highlights}>
@@ -80,6 +104,16 @@ function HomePage() {
                     </div>
                   ))}
                 </div>
+
+                <Button
+                  href={resumeHref}
+                  target="_blank"
+                  download
+                  variant="secondary"
+                  className={styles.resumeButton}
+                >
+                  {t.downloadResume}
+                </Button>
               </div>
 
               <div className={styles.heroVisual}>
@@ -92,6 +126,21 @@ function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.section}>
+        <Container>
+          <div className={styles.aboutStrip}>
+            <div>
+              <h2 className={styles.sectionTitle}>{t.aboutTitle}</h2>
+              <p className={styles.sectionText}>{t.aboutText}</p>
+            </div>
+
+            <Button to="/about" variant="secondary">
+              {t.aboutAction}
+            </Button>
           </div>
         </Container>
       </section>
@@ -111,21 +160,6 @@ function HomePage() {
                 onOpenDetails={handleOpenDetails}
               />
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.section}>
-        <Container>
-          <div className={styles.aboutStrip}>
-            <div>
-              <h2 className={styles.sectionTitle}>{t.aboutTitle}</h2>
-              <p className={styles.sectionText}>{t.aboutText}</p>
-            </div>
-
-            <Button to="/about" variant="secondary">
-              {t.aboutAction}
-            </Button>
           </div>
         </Container>
       </section>
