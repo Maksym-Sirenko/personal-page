@@ -86,7 +86,6 @@
       modalLabel: "Dialog window",
       navigationLabel: "Mobile navigation",
       backToTop: "Back to top",
-      telegramChat: "Message me on Telegram",
     },
   },
   ua: {
@@ -176,7 +175,6 @@
       modalLabel: "Діалогове вікно",
       navigationLabel: "Мобільна навігація",
       backToTop: "Повернутися нагору",
-      telegramChat: "Написати мені в Telegram",
     },
   },
 } as const;
