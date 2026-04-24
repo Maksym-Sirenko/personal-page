@@ -70,6 +70,40 @@ function AboutPage() {
             </div>
           </div>
 
+          <div className={styles.documentCard}>
+            <h2 className={styles.cardTitle}>{t.documentsTitle}</h2>
+            <p className={styles.cardText}>{t.documentsText}</p>
+
+            <div className={styles.documentGrid}>
+              <div className={styles.documentBlock}>
+                <h3 className={styles.documentTitle}>{t.resumeLabel}</h3>
+                <p className={styles.documentText}>{t.resumeText}</p>
+                <Button
+                  href={resumeHref}
+                  target="_blank"
+                  download
+                  variant="primary"
+                  className={styles.documentButton}
+                >
+                  {t.downloadResume}
+                </Button>
+              </div>
+
+              <div className={styles.documentBlock}>
+                <h3 className={styles.documentTitle}>{t.certificateLabel}</h3>
+                <p className={styles.documentText}>{t.certificateText}</p>
+                <Button
+                  href={certificateHref}
+                  target="_blank"
+                  variant="soft"
+                  className={styles.documentButton}
+                >
+                  {t.viewCertificate}
+                </Button>
+              </div>
+            </div>
+          </div>
+
           <div className={styles.hero}>
             <div className={styles.copy}>
               <p className={styles.eyebrow}>Junior Frontend Developer</p>
@@ -100,40 +134,6 @@ function AboutPage() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className={styles.documentCard}>
-              <h2 className={styles.cardTitle}>{t.documentsTitle}</h2>
-              <p className={styles.cardText}>{t.documentsText}</p>
-
-              <div className={styles.documentGrid}>
-                <div className={styles.documentBlock}>
-                  <h3 className={styles.documentTitle}>{t.resumeLabel}</h3>
-                  <p className={styles.documentText}>{t.resumeText}</p>
-                  <Button
-                    href={resumeHref}
-                    target="_blank"
-                    download
-                    variant="primary"
-                    className={styles.documentButton}
-                  >
-                    {t.downloadResume}
-                  </Button>
-                </div>
-
-                <div className={styles.documentBlock}>
-                  <h3 className={styles.documentTitle}>{t.certificateLabel}</h3>
-                  <p className={styles.documentText}>{t.certificateText}</p>
-                  <Button
-                    href={certificateHref}
-                    target="_blank"
-                    variant="soft"
-                    className={styles.documentButton}
-                  >
-                    {t.viewCertificate}
-                  </Button>
-                </div>
-              </div>
             </div>
           </div>
         </Container>
