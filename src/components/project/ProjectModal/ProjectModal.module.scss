@@ -22,7 +22,7 @@
 .description {
   font-size: 17px;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--text-muted);
 }
 
 .gallery {
@@ -33,9 +33,9 @@
 .primaryImageWrap,
 .galleryItem {
   overflow: hidden;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: #f8fafc;
+  background-color: var(--surface-muted);
 }
 
 .primaryImageWrap {
@@ -82,12 +82,12 @@
 
 .stackItem {
   padding: 8px 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
   font-size: 14px;
   line-height: 1.2;
-  color: #374151;
-  background-color: #f9fafb;
+  color: var(--text-soft);
+  background-color: var(--surface-muted);
 }
 
 .responsibilitiesList {
@@ -95,7 +95,7 @@
   flex-direction: column;
   gap: 10px;
   padding-left: 20px;
-  color: #374151;
+  color: var(--text-soft);
 }
 
 .actions {

@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: var(--header-bg);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border);
 }
 
 .inner {
@@ -53,12 +53,12 @@
 }
 
 .logoIcon :global(.logo-s) {
-  stroke: #9ca3af;
+  stroke: var(--border-strong);
   transition: stroke 0.28s ease;
 }
 
 .logo:hover .logoIcon :global(.logo-s) {
-  stroke: #3b82f6;
+  stroke: var(--accent);
 }
 
 .logoText {
@@ -75,10 +75,10 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-strong);
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #111827;
+  background-color: var(--surface-card);
+  color: var(--text);
   cursor: pointer;
   flex-shrink: 0;
   transition:
@@ -144,14 +144,14 @@
   min-height: 48px;
 }
 
-.languageButton {
+.utilityButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 48px;
   height: 44px;
   padding: 0 14px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-strong);
   border-radius: 12px;
   background-color: transparent;
   color: var(--text);
@@ -164,12 +164,12 @@
     transform 0.2s ease;
 }
 
-.languageButton:hover {
-  background-color: #f9fafb;
-  border-color: #9ca3af;
+.utilityButton:hover {
+  background-color: var(--surface-soft);
+  border-color: var(--accent-muted);
 }
 
-.languageButton:active {
+.utilityButton:active {
   transform: translateY(1px);
 }
 

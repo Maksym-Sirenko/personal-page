@@ -6,14 +6,17 @@ import Button from "../../ui/Button/Button";
 import SVGIcon from "../../ui/SVGIcon/SVGIcon";
 import Drawer from "../../ui/Drawer/Drawer";
 import { siteContent, type Language } from "../../../i18n/siteContent";
+import type { Theme } from "../../../layouts/MainLayout";
 import styles from "./Header.module.scss";
 
 type HeaderProps = {
   language: Language;
   setLanguage: React.Dispatch<React.SetStateAction<Language>>;
+  theme: Theme;
+  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
 };
 
-function Header({ language, setLanguage }: HeaderProps) {
+function Header({ language, setLanguage, theme, setTheme }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const t = siteContent[language];
@@ -28,6 +31,10 @@ function Header({ language, setLanguage }: HeaderProps) {
 
   const toggleLanguage = () => {
     setLanguage(prev => (prev === "en" ? "ua" : "en"));
+  };
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === "dark" ? "light" : "dark"));
   };
 
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -69,7 +76,16 @@ function Header({ language, setLanguage }: HeaderProps) {
 
             <button
               type="button"
-              className={styles.languageButton}
+              className={styles.utilityButton}
+              onClick={toggleTheme}
+              aria-label={t.nav.switchTheme}
+            >
+              {theme === "dark" ? t.nav.lightTheme : t.nav.darkTheme}
+            </button>
+
+            <button
+              type="button"
+              className={styles.utilityButton}
               onClick={toggleLanguage}
               aria-label={t.nav.switchLanguage}
             >
@@ -123,7 +139,16 @@ function Header({ language, setLanguage }: HeaderProps) {
 
           <button
             type="button"
-            className={styles.languageButton}
+            className={styles.utilityButton}
+            onClick={toggleTheme}
+            aria-label={t.nav.switchTheme}
+          >
+            {theme === "dark" ? t.nav.lightTheme : t.nav.darkTheme}
+          </button>
+
+          <button
+            type="button"
+            className={styles.utilityButton}
             onClick={toggleLanguage}
             aria-label={t.nav.switchLanguage}
           >

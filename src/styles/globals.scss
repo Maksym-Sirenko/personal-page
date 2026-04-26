@@ -2,6 +2,7 @@
 @use "./variables";
 
 html {
+  background: var(--bg);
   scroll-behavior: smooth;
 }
 

@@ -15,15 +15,15 @@
 .documentCard,
 .contactCard {
   padding: 22px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: var(--surface);
 }
 
 .title,
 .cardTitle {
   margin: 0 0 12px;
-  color: #111827;
+  color: var(--text);
 }
 
 .eyebrow {
@@ -32,7 +32,7 @@
   line-height: 1.4;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #2563eb;
+  color: var(--accent);
 }
 
 .title {
@@ -47,21 +47,19 @@
   margin: 0;
   font-size: 15px;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--text-muted);
 }
 
 .introLead {
   margin-bottom: 12px;
-  color: #111827;
+  color: var(--text);
 }
 
 .contactCard {
   display: grid;
   gap: 18px;
   margin-bottom: 18px;
-  background:
-    linear-gradient(135deg, rgba(239, 246, 255, 0.8), rgba(255, 255, 255, 0.98)),
-    #ffffff;
+  background: var(--spotlight-bg);
 }
 
 .focusList,
@@ -77,12 +75,12 @@
 .goalItem {
   position: relative;
   padding: 12px 14px 12px 38px;
-  border: 1px solid #edf2f7;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: #fbfdff;
+  background-color: var(--surface-muted);
   font-size: 15px;
   line-height: 1.5;
-  color: #111827;
+  color: var(--text);
 }
 
 .focusItem + .focusItem,
@@ -100,7 +98,7 @@
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background-color: #2563eb;
+  background-color: var(--accent);
 }
 
 .documentGrid {
@@ -112,12 +110,10 @@
 
 .documentCard {
   padding: 22px;
-  border: 1px solid #dbeafe;
+  border: 1px solid var(--accent-muted);
   border-radius: 8px;
   margin-bottom: 18px;
-  background:
-    linear-gradient(180deg, rgba(239, 246, 255, 0.72), rgba(255, 255, 255, 0.98)),
-    #ffffff;
+  background: var(--document-bg);
 }
 
 .documentBlock {
@@ -127,24 +123,24 @@
   align-content: start;
   height: 100%;
   padding: 18px;
-  border: 1px solid #dbe3f0;
+  border: 1px solid var(--accent-muted);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.025);
+  background-color: var(--surface-card);
+  box-shadow: 0 4px 14px var(--shadow-soft);
 }
 
 .documentTitle {
   margin: 0;
   font-size: 17px;
   line-height: 1.4;
-  color: #111827;
+  color: var(--text);
 }
 
 .documentText {
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
-  color: #4b5563;
+  color: var(--text-muted);
 }
 
 .documentButton {

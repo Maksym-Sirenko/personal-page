@@ -21,7 +21,10 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://personal-page-eta-weld.vercel.app/" />
-    <meta property="og:image" content="/preview.png" />
+    <meta
+      property="og:image"
+      content="https://personal-page-eta-weld.vercel.app/profile/maksym-hero.jpg"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Maksym Sirenko | Frontend Developer" />
@@ -29,7 +32,27 @@
       name="twitter:description"
       content="Portfolio of Maksym Sirenko - Junior Frontend Developer building clean and responsive web applications."
     />
-    <meta name="twitter:image" content="/preview.png" />
+    <meta
+      name="twitter:image"
+      content="https://personal-page-eta-weld.vercel.app/profile/maksym-hero.jpg"
+    />
+    <script>
+      (() => {
+        try {
+          const savedTheme = window.localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = savedTheme === "light" || savedTheme === "dark"
+            ? savedTheme
+            : prefersDark
+              ? "dark"
+              : "light";
+
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
