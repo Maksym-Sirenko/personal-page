@@ -7,6 +7,15 @@
     <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
   </symbol>
 
+  <symbol id="icon-sun" viewBox="0 0 24 24">
+    <path d="M12 7.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Z" fill="none" stroke="currentColor" stroke-width="1.8" />
+    <path d="M12 2.8v2.1M12 19.1v2.1M4.9 4.9l1.5 1.5M17.6 17.6l1.5 1.5M2.8 12h2.1M19.1 12h2.1M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+  </symbol>
+
+  <symbol id="icon-moon" viewBox="0 0 24 24">
+    <path d="M20.3 14.4A7.9 7.9 0 0 1 9.6 3.7a8.6 8.6 0 1 0 10.7 10.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+  </symbol>
+
   <symbol id="icon-email" viewBox="0 0 24 24">
     <path d="M4 6.5h16v11H4v-11Zm1.9 1.4 6.1 4.5 6.1-4.5H5.9Zm12.6 8.2V9.4L12 14.2 5.5 9.4v6.7h13Z" fill="currentColor" />
   </symbol>

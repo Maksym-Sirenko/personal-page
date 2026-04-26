@@ -9,8 +9,6 @@
       closeMenu: "Close navigation menu",
       switchLanguage: "Switch language",
       switchTheme: "Switch color theme",
-      darkTheme: "Dark",
-      lightTheme: "Light",
     },
     home: {
       title: "Maksym Sirenko",
@@ -104,8 +102,6 @@
       closeMenu: "Закрити меню навігації",
       switchLanguage: "Змінити мову",
       switchTheme: "Змінити тему",
-      darkTheme: "Темна",
-      lightTheme: "Світла",
     },
     home: {
       title: "Максим Сіренко",

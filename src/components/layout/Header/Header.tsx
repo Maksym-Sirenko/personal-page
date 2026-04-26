@@ -76,11 +76,18 @@ function Header({ language, setLanguage, theme, setTheme }: HeaderProps) {
 
             <button
               type="button"
-              className={styles.utilityButton}
+              className={clsx(
+                styles.themeToggle,
+                theme === "dark" && styles.themeToggleDark
+              )}
               onClick={toggleTheme}
+              role="switch"
+              aria-checked={theme === "dark"}
               aria-label={t.nav.switchTheme}
             >
-              {theme === "dark" ? t.nav.lightTheme : t.nav.darkTheme}
+              <span className={styles.themeThumb} />
+              <SVGIcon name="icon-sun" className={styles.themeIcon} />
+              <SVGIcon name="icon-moon" className={styles.themeIcon} />
             </button>
 
             <button
@@ -139,11 +146,18 @@ function Header({ language, setLanguage, theme, setTheme }: HeaderProps) {
 
           <button
             type="button"
-            className={styles.utilityButton}
+            className={clsx(
+              styles.themeToggle,
+              theme === "dark" && styles.themeToggleDark
+            )}
             onClick={toggleTheme}
+            role="switch"
+            aria-checked={theme === "dark"}
             aria-label={t.nav.switchTheme}
           >
-            {theme === "dark" ? t.nav.lightTheme : t.nav.darkTheme}
+            <span className={styles.themeThumb} />
+            <SVGIcon name="icon-sun" className={styles.themeIcon} />
+            <SVGIcon name="icon-moon" className={styles.themeIcon} />
           </button>
 
           <button
