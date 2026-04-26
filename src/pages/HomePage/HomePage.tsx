@@ -76,49 +76,53 @@ function HomePage() {
           <div className={styles.heroShell}>
             <div className={styles.heroLayout}>
               <div className={styles.heroContent}>
-                <p className={styles.eyebrow}>{t.role}</p>
-                <h1 className={styles.title}>{t.title}</h1>
-                <p className={styles.subtitle}>{t.subtitle}</p>
+                <div className={styles.heroMain}>
+                  <p className={styles.eyebrow}>{t.role}</p>
+                  <h1 className={styles.title}>{t.title}</h1>
+                  <p className={styles.subtitle}>{t.subtitle}</p>
 
-                <div className={styles.actions}>
-                  <Button to="/projects" variant="primary" className={styles.actionButton}>
-                    {t.viewProjects}
-                  </Button>
+                  <div className={styles.actions}>
+                    <Button to="/projects" variant="primary" className={styles.actionButton}>
+                      {t.viewProjects}
+                    </Button>
 
-                  <div className={styles.contactLinks} aria-label={t.contact}>
-                    {contactLinks.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        className={styles.contactLink}
-                        aria-label={link.label}
-                        target={link.href.startsWith("http") ? "_blank" : undefined}
-                        rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      >
-                        <SVGIcon name={link.icon} className={styles.contactIcon} />
-                      </a>
-                    ))}
+                    <div className={styles.contactLinks} aria-label={t.contact}>
+                      {contactLinks.map((link) => (
+                        <a
+                          key={link.label}
+                          href={link.href}
+                          className={styles.contactLink}
+                          aria-label={link.label}
+                          target={link.href.startsWith("http") ? "_blank" : undefined}
+                          rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        >
+                          <SVGIcon name={link.icon} className={styles.contactIcon} />
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className={styles.highlights}>
-                  {t.highlights.map((item) => (
-                    <div key={item.label} className={styles.highlightItem}>
-                      <span className={styles.highlightValue}>{item.value}</span>
-                      <span className={styles.highlightLabel}>{item.label}</span>
-                    </div>
-                  ))}
-                </div>
+                <div className={styles.heroMeta}>
+                  <div className={styles.highlights}>
+                    {t.highlights.map((item) => (
+                      <div key={item.label} className={styles.highlightItem}>
+                        <span className={styles.highlightValue}>{item.value}</span>
+                        <span className={styles.highlightLabel}>{item.label}</span>
+                      </div>
+                    ))}
+                  </div>
 
-                <Button
-                  href={resumeHref}
-                  target="_blank"
-                  download
-                  variant="secondary"
-                  className={styles.resumeButton}
-                >
-                  {t.downloadResume}
-                </Button>
+                  <Button
+                    href={resumeHref}
+                    target="_blank"
+                    download
+                    variant="secondary"
+                    className={styles.resumeButton}
+                  >
+                    {t.downloadResume}
+                  </Button>
+                </div>
               </div>
 
               <div className={styles.heroVisual}>

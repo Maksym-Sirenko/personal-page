@@ -39,6 +39,9 @@
       github: "GitHub",
       techStack: "Tech stack",
       responsibilities: "Responsibilities",
+      filterLabel: "Filter by technology",
+      allTechnologies: "All",
+      emptyFilter: "No projects with this technology yet.",
     },
     about: {
       title: "About Me",
@@ -128,6 +131,9 @@
       github: "GitHub",
       techStack: "Технології",
       responsibilities: "Що я робив",
+      filterLabel: "Фільтр за технологією",
+      allTechnologies: "Усі",
+      emptyFilter: "Поки немає проєктів із цією технологією.",
     },
     about: {
       title: "Про мене",
