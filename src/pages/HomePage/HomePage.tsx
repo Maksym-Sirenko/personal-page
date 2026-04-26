@@ -141,21 +141,6 @@ function HomePage() {
 
       <section className={styles.section}>
         <Container>
-          <div className={styles.aboutStrip}>
-            <div>
-              <h2 className={styles.sectionTitle}>{t.aboutTitle}</h2>
-              <p className={styles.sectionText}>{t.aboutText}</p>
-            </div>
-
-            <Button to="/about" variant="secondary">
-              {t.aboutAction}
-            </Button>
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.section}>
-        <Container>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>{t.featuredTitle}</h2>
             <p className={styles.sectionText}>{t.featuredSubtitle}</p>
@@ -169,6 +154,21 @@ function HomePage() {
                 onOpenDetails={handleOpenDetails}
               />
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.section}>
+        <Container>
+          <div className={styles.aboutStrip}>
+            <div>
+              <h2 className={styles.sectionTitle}>{t.aboutTitle}</h2>
+              <p className={styles.sectionText}>{t.aboutText}</p>
+            </div>
+
+            <Button to="/about" variant="secondary">
+              {t.aboutAction}
+            </Button>
           </div>
         </Container>
       </section>
