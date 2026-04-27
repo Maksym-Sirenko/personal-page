@@ -10,6 +10,7 @@ export const projectsContent: Project[] = [
       en: "Camper rental platform with filtering, API integration, dynamic routing, and booking flow.",
     },
     coverImage: "/projects/travel-trucks/travel-trucks-cover.jpg",
+    coverImageSize: { width: 1400, height: 498 },
     galleryImages: [
       "/projects/travel-trucks/travel-trucks-catalog.jpg",
       "/projects/travel-trucks/travel-trucks-details.jpg",
@@ -41,6 +42,7 @@ export const projectsContent: Project[] = [
       en: "Fullstack team project with reusable UI components, modal system, and responsive interface built from Figma.",
     },
     coverImage: "/projects/leleka-app/leleka-app-cover.jpg",
+    coverImageSize: { width: 1400, height: 498 },
     galleryImages: ["/projects/leleka-app/leleka-app-modal.jpg"],
     stack: ["Next.js", "React", "TypeScript", "Axios", "CSS", "Figma"],
     responsibilities: {
@@ -69,6 +71,7 @@ export const projectsContent: Project[] = [
       en: "Notes app with registration, login, filtering, pagination, and backend integration.",
     },
     coverImage: "/projects/notehub/notehub-cover.jpg",
+    coverImageSize: { width: 1280, height: 459 },
     stack: ["Node.js", "Express", "MongoDB", "JWT", "REST API", "Render", "Vercel"],
     responsibilities: {
       ua: [
@@ -96,6 +99,7 @@ export const projectsContent: Project[] = [
       en: "Team website with responsive layout, pagination, and performers cards section.",
     },
     coverImage: "/projects/artistshub/artistshub-cover.jpg",
+    coverImageSize: { width: 1280, height: 460 },
     galleryImages: ["/projects/artistshub/artistshub-artists.jpg"],
     stack: ["HTML", "CSS", "JavaScript", "GitHub", "Figma"],
     responsibilities: {
@@ -122,6 +126,7 @@ export const projectsContent: Project[] = [
       en: "Interactive image gallery with modal preview and external library integration.",
     },
     coverImage: "/projects/gallery-lightbox/gallery-lightbox-cover.jpg",
+    coverImageSize: { width: 1280, height: 458 },
     galleryImages: ["/projects/gallery-lightbox/gallery-lightbox-search.jpg"],
     stack: ["JavaScript", "SimpleLightbox", "HTML", "CSS", "GitHub"],
     responsibilities: {
@@ -150,6 +155,7 @@ export const projectsContent: Project[] = [
       en: "Responsive business landing page based on Figma design with semantic HTML structure.",
     },
     coverImage: "/projects/webstudio/webstudio-cover.jpg",
+    coverImageSize: { width: 1280, height: 458 },
     galleryImages: ["/projects/webstudio/webstudio-portfolio.jpg"],
     stack: ["HTML", "CSS", "Responsive Design", "GitHub", "Figma"],
     responsibilities: {
@@ -176,6 +182,7 @@ export const projectsContent: Project[] = [
       en: "Adaptive landing page with implemented Team and Gallery sections.",
     },
     coverImage: "/projects/yoga-studio/yoga-studio-cover.jpg",
+    coverImageSize: { width: 1280, height: 457 },
     stack: ["HTML", "CSS", "GitHub", "Figma"],
     responsibilities: {
       ua: [

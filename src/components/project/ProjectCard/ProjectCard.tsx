@@ -24,7 +24,10 @@ function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
             src={project.coverImage}
             alt={`${project.title[language]} preview`}
             className={styles.coverImage}
+            width={project.coverImageSize?.width}
+            height={project.coverImageSize?.height}
             loading="lazy"
+            decoding="async"
           />
         ) : (
           <div aria-hidden="true">

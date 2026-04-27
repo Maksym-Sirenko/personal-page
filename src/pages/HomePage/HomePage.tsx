@@ -131,6 +131,10 @@ function HomePage() {
                     src={heroImageSrc}
                     alt="Maksym Sirenko portrait"
                     className={styles.heroImage}
+                    width={540}
+                    height={760}
+                    fetchPriority="high"
+                    decoding="async"
                   />
                 </div>
               </div>

@@ -20,6 +20,8 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   const modalImages = [project.coverImage, ...(project.galleryImages ?? [])].filter(
     (image): image is string => Boolean(image)
   );
+  const primaryImageSize =
+    modalImages[0] === project.coverImage ? project.coverImageSize : undefined;
 
   return (
     <Modal
@@ -42,6 +44,9 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 src={modalImages[0]}
                 alt={`${project.title[language]} preview`}
                 className={styles.primaryImage}
+                width={primaryImageSize?.width}
+                height={primaryImageSize?.height}
+                decoding="async"
               />
             </div>
 
